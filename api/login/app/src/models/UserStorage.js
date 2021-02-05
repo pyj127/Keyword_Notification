@@ -3,7 +3,18 @@
 const fs = require("fs").promises;
 
 class UserStorage{
-    
+    static #getUserInfo(data, id){
+        const users = JSON.parse(data);
+        const idx=users.id.indexOf(id); // => "id","psword","name"
+        const usersKeys=Object.keys(users);
+
+        const userInfo=usersKeys.reduce((newUser,info)=>{
+            newUser[info]=users[info][idx];
+            return newUser;
+        }, {});
+        
+        return userInfo;
+    }
 
     static getUsers(...fields){
         //const users= this.#users;
@@ -25,19 +36,6 @@ class UserStorage{
         })
          .catch((err) => console.error(err));
 
-    }
-
-    static #getUserInfo(data, id){
-        const users = JSON.parse(data);
-        const idx=users.id.indexOf(id); // => "id","psword","name"
-        const usersKeys=Object.keys(users);
-
-        const userInfo=usersKeys.reduce((newUser,info)=>{
-            newUser[info]=users[info][idx];
-            return newUser;
-        }, {});
-        
-        return userInfo;
     }
 
     static save(userInfo){
