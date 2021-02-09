@@ -11,15 +11,17 @@ class User{
     //완료되기 전에 콘솔에 찍혀버림. (다 읽어오기 전에 찍는다.) -> 비동기 필요.
     async login(){
         const client=this.body;
-        const { id, psword } = await UserStorage.getUserInfo(client.id);
-        console.log(id);
-        if(id){
-            if(id=== client.id && psword === client.psword){
-                return {success : true};
+        try{
+         const { u_id, password } = await UserStorage.getUserInfo(client.id);
+            if(u_id){
+                if(u_id=== client.id && password === client.psword){
+                    return {success : true};
+                }
+                return { success:false, msg:"비밀번호가 틀렸습니다." };
             }
-            return { success:false, msg:"비밀번호가 틀렸습니다." };
+        }catch(e){
+            return { success: false, msg: "존재하지 않는 아이디입니다." };
         }
-        return { success: false, msg: "존재하지 않는 아이디입니다." };
     }
 
     async register(){
