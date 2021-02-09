@@ -1,11 +1,11 @@
 "use strict";
 
-const fs = require("fs").promises;
+const db=require("../config/db");
 
 class UserStorage{
     static #getUserInfo(data, id){
         const users = JSON.parse(data);
-        const idx=users.id.indexOf(id); // => "id","psword","name"
+        const idx=users.id.indexOf(id); // => "id","psword","email"
         const usersKeys=Object.keys(users);
 
         const userInfo=usersKeys.reduce((newUser,info)=>{
@@ -30,35 +30,21 @@ class UserStorage{
     }
 
     static getUsers(isAll, ...fields){
-        return fs.readFile("./src/database/users.json")
-         .then((data)=>{
-            return this.#getUsers(data, isAll, fields);
-        })
-         .catch((err) => console.error(err));
-        //const users= this.#users;
+       
     }
 
     static getUserInfo(id){
-        //const users=this.#users;
-        //julie : database 명, users.json : table
-        return fs.readFile("./src/database/users.json")
-         .then((data)=>{
-            return this.#getUserInfo(data, id);
-        })
-         .catch((err) => console.error(err));
-
+        return new Promise((resolve, reject)=>{
+            db.query("SELECT * FROM user WHERE u_id=?",[id],(err, data)=>{
+                if(err) reject(err);
+                console.log(data[0]);
+                resolve(data[0]);
+            });
+        });   
     }
 
     static async save(userInfo){
-        const users= await this.getUsers(true);
-        if(users.id.includes(userInfo.id)){
-           throw "이미 존재하는 아이디입니다.";
-        }
-        users.id.push(userInfo.id);
-        users.name.push(userInfo.name);
-        users.psword.push(userInfo.psword);
-        fs.writeFile("./src/database/users.json", JSON.stringify(users));
-        return {success : true};
+       
 
     }
 
