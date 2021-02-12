@@ -1,6 +1,6 @@
 import React from "react";
-import Loading from "./Loading";
-import SwitchScreen from "./src/routers/SwitchScreen";
+//import Loading from "./Loading";
+//import SwitchScreen from "./src/routers/SwitchScreen";
 import Signup from "./Signup";
 
 export default class extends React.Component {
