@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Icon from "react-native-vector-icons/Entypo"; //Entypo or MaterialCommunityIcons
+import Icon from "src/routers/node_modules/react-native-vector-icons/Entypo"; //Entypo or MaterialCommunityIcons
 
 export default function Loading() {
   return (

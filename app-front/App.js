@@ -1,6 +1,7 @@
 import React from "react";
 import Loading from "./Loading";
-import SwitchScreen from "./app/routers/SwitchScreen";
+import SwitchScreen from "./src/routers/SwitchScreen";
+import Signup from "./Signup";
 
 export default class extends React.Component {
   state = {
@@ -9,10 +10,16 @@ export default class extends React.Component {
   };
   componentDidMount = async () => {
     setTimeout(() => {
-      this.setState({ isLoading: false }); //Loading으로 넘어가서 작업하려면 true로 바꾸면 됨
+      this.setState({ isLoading: false }); 
     }, 3000); //3초후에 Login화면으로 전환됨
   };
 
+  render() {
+    return <Signup />;
+  }
+}
+
+/*
   render() {
     if (this.state.isLoading) {
       return <Loading />;
@@ -20,4 +27,4 @@ export default class extends React.Component {
       return <SwitchScreen />;
     }
   }
-}
+*/
