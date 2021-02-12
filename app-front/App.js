@@ -1,10 +1,11 @@
 import React from "react";
-import Loading from "./Loading"; 
-import Login from "./Login";
+import Loading from "./Loading";
+import SwitchScreen from "./app/routers/SwitchScreen";
 
 export default class extends React.Component {
   state = {
     isLoading: true,
+    //id:null, pw:null 이런식으로 해보기
   };
   componentDidMount = async () => {
     setTimeout(() => {
@@ -16,7 +17,7 @@ export default class extends React.Component {
     if (this.state.isLoading) {
       return <Loading />;
     } else {
-      return <Login />;
+      return <SwitchScreen />;
     }
   }
 }
