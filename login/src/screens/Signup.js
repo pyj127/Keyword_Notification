@@ -20,8 +20,27 @@ const ErrorText = styled.Text`
   color: ${({ theme }) => theme.errorText};
 `;
 
+/* 백엔드 완료되면 수정
 const Signup = () => {
-  const [name, setName] = useState('');
+  ...
+  const _handleSignupButtonPress = async() => {
+    try {
+      const user = await signup({ email, password, name});
+      console.log(user);
+      Alert.alert('Signup Success', user.email);
+    } catch (e) {
+      Alert.alert('Signup Error', e.message);
+    }
+  };
+
+  return (...);
+};
+...
+
+*/
+
+const Signup = () => {
+  const [id, setId] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
@@ -37,8 +56,8 @@ const Signup = () => {
   useEffect(() => {
     if (didMountRef.current) {
       let _errorMessage = '';
-      if (!name) {
-        _errorMessage = 'Please enter your name.';
+      if (!id) {
+        _errorMessage = 'Please enter your id.';
       } else if (!validateEmail(email)) {
         _errorMessage = 'Please verify your email.';
       } else if (password.length < 6) {
@@ -52,13 +71,13 @@ const Signup = () => {
     } else {
       didMountRef.current = true;
     }
-  }, [name, email, password, passwordConfirm]);
+  }, [id, email, password, passwordConfirm]);
 
   useEffect(() => {
     setDisabled(
-      !(name && email && password && passwordConfirm && !errorMessage)
+      !(id && email && password && passwordConfirm && !errorMessage)
     );
-  }, [name, email, password, passwordConfirm, errorMessage]);
+  }, [id, email, password, passwordConfirm, errorMessage]);
 
   const _handleSignupButtonPress = () => {};
 
@@ -66,15 +85,15 @@ const Signup = () => {
     <Container>
         <Image rounded />
         <Input
-          label="Name"
-          value={name}
-          onChangeText={text => setName(text)}
+          label="ID"
+          value={id}
+          onChangeText={text => setId(text)}
           onSubmitEditing={() => {
-            setName(name.trim());
+            setName(id.trim());
             emailRef.current.focus();
           }}
-          onBlur={() => setName(name.trim())}
-          placeholder="Name"
+          onBlur={() => setId(id.trim())}
+          placeholder="ID"
           returnKeyType="next"
         />
         <Input

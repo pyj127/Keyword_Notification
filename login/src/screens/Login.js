@@ -8,6 +8,7 @@ import { Image, Input } from '../components';
 import { validateEmail, removeWhitespace} from '../utils/common'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'; //화면짤림문제해결, 노치 디자인 대응, padding값 얻기,useSafeAreaInsets Hook
 
+
 const Container = styled.View`
   flex: 1;
   justify-content: center;
@@ -27,7 +28,7 @@ const ErrorText = styled.Text`
 `;
 
 const Login = ({ navigation }) => {
-  const [email, setEmail] = useState('');
+  const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const passwordRef = useRef(); //키보드 next(tab)로 아이디 입력창에서 비밀번호 입력창으로 이동 가능
   const [errorMessage, setErrorMessage] = useState('');
@@ -35,15 +36,11 @@ const Login = ({ navigation }) => {
   const insets = useSafeAreaInsets();
 
   useEffect(() => {
-    setDisabled(!(email && password && !errorMessage));
-  }, [email, password, errorMessage]);
+    setDisabled(!(id && password && !errorMessage));
+  }, [id, password, errorMessage]);
 
-  const _handleEmailChange = email => {
-    const changedEmail = removeWhitespace(email);
-    setEmail(changedEmail);
-    setErrorMessage(
-      validateEmail(changedEmail) ? '' : 'Please verify your email.'
-    );
+  const _handleIdChange = id => {
+    setId(removeWhitespace(id));
   };
   const _handlePasswordChange = password => {
     setPassword(removeWhitespace(password));
@@ -54,11 +51,11 @@ const Login = ({ navigation }) => {
     <Container insets={insets}>
       <Image />
         <Input
-          label="Email"
-          value={email}
-          onChangeText={_handleEmailChange} 
+          label="ID"
+          value={id}
+          onChangeText={_handleIdChange} 
           onSubmitEditing={() => (_handleLoginButtonPress)}
-          placeholder="Email"
+          placeholder="ID"
           returnKeyType="next"
         />
         <Input
@@ -87,16 +84,3 @@ const Login = ({ navigation }) => {
 };
 
 export default Login;
-
-/*
-const Login = ({ navigation }) => {
-  return (
-    <Container>
-      <Image imageStyle={{borderRadius: 8}}/>
-      <Button title="Signup" onPress={() => navigation.navigate('Signup')} />
-    </Container>
-  );
-};
-
-export default Login;
-*/
