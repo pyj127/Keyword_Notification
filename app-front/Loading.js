@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Entypo"; //Entypo or MaterialCommunityIcons
+import { Entypo } from '@expo/vector-icons';
 
 export default function Loading() {
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <Icon name="bell" size={200} color="gold" />
+        <Entypo name="bell" size={200} color="gold" />
       </View>
 
       <View style={styles.titleContainer}>

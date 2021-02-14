@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect} from 'react';
 import styled from 'styled-components/native';
 import { Input, Button } from '../../components';
-import { Text, View, TouchableHighlight } from "react-native";
+import { Alert, Text, View, TouchableHighlight } from "react-native";
 //import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { validateEmail, removeWhitespace } from '../../utils/common';
 
@@ -76,17 +76,14 @@ const SignupScreen= ({ navigation }) => {
         }),
       })
     .then(response=>{
-      console.log(response);
       return response.json();
     }).then(data=>{
-      console.log(data.success);
-
       if (data.success === true){
-        console.log("회원가입 완료");
-
+        Alert.alert("정상적으로 회원가입 되었습니다.");
+        () => navigation.navigate("LoginScreen");
       }
       else{
-        console.log("회원가입 실패");
+        Alert.alert("입력한 정보를 확인해주세요.");
       }
     })
   };
@@ -144,7 +141,6 @@ const SignupScreen= ({ navigation }) => {
             title = "login"
             onPress={() => navigation.navigate("LoginScreen")}
             underlayColor={"transparent"}
-            marginTop = "20"
          />
 
       </Container>

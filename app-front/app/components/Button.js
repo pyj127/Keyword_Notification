@@ -10,6 +10,7 @@ const Container = styled.TouchableOpacity`
   border-radius: 4px;
   width: 100%;
   padding: 10px;
+  marginTop: 20px;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)}; //버튼 클릭 가능 여부,button에서 props를 통해 전달되는 disabled 값에 따라 버튼 스타일 변경
 `;
 const Title = styled.Text`

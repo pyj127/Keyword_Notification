@@ -7,7 +7,7 @@ import ListScreen from "../screens/Tab/ListScreen";
 import AddScreen from "../screens/Tab/AddScreen";
 import SettingScreen from "../screens/Tab/SettingScreen";
 import DetailsScreen from "../screens/Tab/DetailsScreen";
-import Icon from "react-native-vector-icons/Entypo";
+import { Entypo } from '@expo/vector-icons';
 
 const ListStack = createStackNavigator(); //여기서 home없애기
 
@@ -49,7 +49,7 @@ export default function TabStackScreen() {
               } else {
                 iconName = "cog";
               }
-              return <Icon name={iconName} size={30} color={color} />;
+              return <Entypo name="bell" size={30} color={color} />
             },
           })}
           tabBarOptions={{
