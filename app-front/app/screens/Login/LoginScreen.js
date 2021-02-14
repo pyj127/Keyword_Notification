@@ -8,7 +8,6 @@ import {
   TextInput,
   TouchableHighlight,
   Alert,
-  SafeAreaView,
 } from "react-native";
 
 export default class LoginScreen extends Component {
@@ -24,10 +23,12 @@ export default class LoginScreen extends Component {
       Alert.alert("아이디 또는 비밀번호를 \n확인해주세요.");
     } else {
       // DB에 존재하는 회원데이터와 일치할 시 로그인 성공
+      //this.props.navigation.dispatch(SwitchActions.jumpTo(TabStackScreen));
       this.props.navigation.navigate("TabStackScreen");
+      //useNavigation.navigate("TabStackScreen");
+      //Actions.Tabb();
     }
   }
-
   render() {
     return (
       <View style={styles.container}>
@@ -59,8 +60,11 @@ export default class LoginScreen extends Component {
             borderColor="dodgerblue"
           />
         </View>
-        <View style={{ marginTop: 10, borderRadius: 8 }}>
-          <TouchableHighlight onPress={() => this.buttonClick()}>
+        <View style={{ marginTop: 20, borderRadius: 8 }}>
+          <TouchableHighlight
+            onPress={() => this.buttonClick()}
+            underlayColor={"transparent"}
+          >
             <View style={styles.button}>
               <Text style={styles.buttonTitle}>log in</Text>
             </View>
@@ -122,7 +126,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   idPw: {
-    height: 40,
+    height: 45,
     borderColor: "gray",
     borderWidth: 1,
     paddingLeft: 15,

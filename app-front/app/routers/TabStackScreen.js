@@ -3,10 +3,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
-import ListScreen from "../screens/ListScreen";
-import AddScreen from "../screens/AddScreen";
-import SettingScreen from "../screens/SettingScreen";
-import DetailsScreen from "../screens/DetailsScreen";
+import ListScreen from "../screens/Tab/ListScreen";
+import AddScreen from "../screens/Tab/AddScreen";
+import SettingScreen from "../screens/Tab/SettingScreen";
+import DetailsScreen from "../screens/Tab/DetailsScreen";
 import Icon from "react-native-vector-icons/Entypo";
 
 const ListStack = createStackNavigator(); //여기서 home없애기
