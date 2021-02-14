@@ -144,6 +144,7 @@ const SignupScreen= ({ navigation }) => {
             title = "login"
             onPress={() => navigation.navigate("LoginScreen")}
             underlayColor={"transparent"}
+            marginTop = "20"
          />
 
       </Container>

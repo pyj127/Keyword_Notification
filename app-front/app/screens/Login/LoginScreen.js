@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import AsyncStorage from '@react-native-community/async-storage';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import {
   Text,
@@ -58,7 +58,7 @@ export default class LoginScreen extends Component {
 
         <View style={styles.iconContainer}>
           <Text style={styles.title}>Alarm</Text>
-          <Icon name="bell-ring" size={50} color="gold" />
+          <MaterialCommunityIcons name="bell-ring" size={50} color="gold" />
         </View>
 
         <View style={styles.id}>
@@ -67,7 +67,6 @@ export default class LoginScreen extends Component {
             style={styles.idPw}
             placeholder="아이디"
             placeholderTextColor="black"
-            borderRadius="8"
             borderColor="dodgerblue"
           />
         </View>
@@ -78,7 +77,6 @@ export default class LoginScreen extends Component {
             placeholder="비밀번호"
             placeholderTextColor="black"
             secureTextEntry
-            borderRadius="8"
             borderColor="dodgerblue"
           />
         </View>
