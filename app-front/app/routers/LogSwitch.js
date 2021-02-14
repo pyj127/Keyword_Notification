@@ -1,7 +1,7 @@
 import LoginScreen from "../screens/Login/LoginScreen";
 import IDScreen from "../screens/Login/IDScreen";
 import PWScreen from "../screens/Login/PWScreen";
-import SignScreen from "../screens/Login/SignScreen";
+import SignupScreen from "../screens/Login/SignupScreen";
 import { createSwitchNavigator, createAppContainer } from "react-navigation";
 
 export default createAppContainer(
@@ -10,7 +10,7 @@ export default createAppContainer(
       LoginScreen,
       IDScreen,
       PWScreen,
-      SignScreen,
+      SignupScreen,
     },
     {
       initialRouteName: "LoginScreen",
