@@ -20,11 +20,11 @@ const ErrorText = styled.Text`
   height: 20px;
   margin-bottom: 10px;
   line-height: 20px;
-  color:  #000000;
+  color: #ff0000;
 `;
 
 const SignupScreen= ({ navigation }) => {
-  const [name, setName] = useState('');
+  const [id, setId] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
@@ -40,8 +40,8 @@ const SignupScreen= ({ navigation }) => {
   useEffect(() => {
     if (didMountRef.current) {
       let _errorMessage = '';
-      if (!name) {
-        _errorMessage = 'Please enter your name.';
+      if (!id) {
+        _errorMessage = 'Please enter your ID.';
       } else if (!validateEmail(email)) {
         _errorMessage = 'Please verify your email.';
       } else if (password.length < 6) {
@@ -55,13 +55,13 @@ const SignupScreen= ({ navigation }) => {
     } else {
       didMountRef.current = true;
     }
-  }, [name, email, password, passwordConfirm]);
+  }, [id, email, password, passwordConfirm]);
 
   useEffect(() => {
     setDisabled(
-      !(name && email && password && passwordConfirm && !errorMessage)
+      !(id && email && password && passwordConfirm && !errorMessage)
     );
-  }, [name, email, password, passwordConfirm, errorMessage]);
+  }, [id, email, password, passwordConfirm, errorMessage]);
 
   const _handleSignupButtonPress = () => {
     fetch('http://13.125.132.137:3000/register', {
@@ -70,7 +70,7 @@ const SignupScreen= ({ navigation }) => {
         'CONTENT-TYPE': 'application/json',
       },
       body: JSON.stringify({
-        id: name,
+        id: id,
         email: email,
         psword: password,
         }),
@@ -91,15 +91,15 @@ const SignupScreen= ({ navigation }) => {
   return (
     <Container>
         <Input
-          label="Name"
-          value={name}
-          onChangeText={text => setName(text)}
+          label="ID"
+          value={id}
+          onChangeText={text => setId(text)}
           onSubmitEditing={() => {
-            setName(name.trim());
+            setId(id.trim());
             emailRef.current.focus();
           }}
-          onBlur={() => setName(name.trim())}
-          placeholder="Name"
+          onBlur={() => setId(id.trim())}
+          placeholder="ID"
           returnKeyType="next"
         />
         <Input
