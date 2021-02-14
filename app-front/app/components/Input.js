@@ -11,13 +11,13 @@ const Label = styled.Text`
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 6px;
-  color: ${({ theme, isFocused }) => (isFocused ? theme.text : theme.label)};
+  color: #a6a6a6;
 `;
 const StyledTextInput = styled.TextInput.attrs(({ theme }) => ({
   placeholderTextColor: theme.inputPlaceholder,
 }))`
-  background-color: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
+  background-color:  #ffffff;
+  color:  #000000;
   padding: 20px 10px;
   font-size: 16px;
   border: 1px solid
