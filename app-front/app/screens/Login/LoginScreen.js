@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Component } from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import AsyncStorage from '@react-native-community/async-storage';
+
 import {
   Text,
   View,
@@ -19,15 +21,35 @@ export default class LoginScreen extends Component {
     };
   }
   buttonClick() {
-    if (this.state.id === null || this.state.pw === null) {
-      Alert.alert("아이디 또는 비밀번호를 \n확인해주세요.");
-    } else {
-      // DB에 존재하는 회원데이터와 일치할 시 로그인 성공
-      //this.props.navigation.dispatch(SwitchActions.jumpTo(TabStackScreen));
-      this.props.navigation.navigate("TabStackScreen");
-      //useNavigation.navigate("TabStackScreen");
-      //Actions.Tabb();
-    }
+    fetch('http://13.125.132.137:3000/login', {
+      method: "POST",
+      headers: {
+        'CONTENT-TYPE': 'application/json',
+      },
+      body: JSON.stringify({
+        id: this.state.id,
+        psword: this.state.pw}),
+      })
+    .then(response=>{
+      console.log(response);
+      return response.json();
+    }).then(data=>{
+      console.log(data.success);
+
+
+      if (data.success === true){
+        AsyncStorage.setItem('authInfo', JSON.stringify(data.result))
+        
+        // DB에 존재하는 회원데이터와 일치할 시 로그인 성공
+        this.props.navigation.navigate("TabStackScreen");
+      }
+      else{
+        console.log("로그인 실패");
+        Alert.alert("아이디 또는 비밀번호를 \n확인해주세요.");
+
+      }
+    })
+  
   }
   render() {
     return (
@@ -87,7 +109,7 @@ export default class LoginScreen extends Component {
           </Text>
           <Text
             style={styles.etc}
-            onPress={() => this.props.navigation.navigate("SignScreen")}
+            onPress={() => this.props.navigation.navigate("SignupScreen")}
           >
             | {"  "}회원가입
           </Text>
