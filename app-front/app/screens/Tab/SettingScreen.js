@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: "dodgerblue",
   },
   bottom_container: {
-    flex: 15, //이거 더 증가시키면 헤더 부분 작아짐
+    flex: 20, //이거 더 증가시키면 헤더 부분 작아짐
     backgroundColor: "white",
   },
 });

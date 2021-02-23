@@ -4,10 +4,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
 import ListScreen from "../screens/Tab/ListScreen";
-import AddScreen from "../screens/Tab/AddScreen";
+import AddScreen from "../screens/Tab/Add/AddScreen";
 import SettingScreen from "../screens/Tab/SettingScreen";
 import DetailsScreen from "../screens/Tab/DetailsScreen";
-import { Entypo } from '@expo/vector-icons';
+import Icon from "react-native-vector-icons/Entypo";
 
 const ListStack = createStackNavigator(); //여기서 home없애기
 
@@ -23,10 +23,20 @@ function ListStackScreen() {
           headerTitleStyle: {
             fontWeight: "bold",
             fontSize: 20,
+            alignSelf: "center",
           },
         }}
       />
-      <ListStack.Screen name="장학생" component={DetailsScreen} />
+      <ListStack.Screen
+        name="장학생"
+        component={DetailsScreen}
+        options={{
+          headerTitleStyle: {
+            fontSize: 20,
+            //alignSelf: "center",
+          },
+        }}
+      />
     </ListStack.Navigator>
   );
 }
@@ -49,7 +59,7 @@ export default function TabStackScreen() {
               } else {
                 iconName = "cog";
               }
-              return <Entypo name="bell" size={30} color={color} />
+              return <Icon name={iconName} size={30} color={color} />;
             },
           })}
           tabBarOptions={{
