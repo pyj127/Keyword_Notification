@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 60,
-    fontWeight: "900",
+    fontWeight: Platform.OS === "android" ? "bold" : "900",
     color: "gold",
   },
 });
