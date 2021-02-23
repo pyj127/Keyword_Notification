@@ -238,7 +238,7 @@ const pickerSelectStyles = StyleSheet.create({
     fontSize: 16,
     paddingVertical: 12,
     paddingHorizontal: 10,
-    borderWidth: 1,
+    //borderWidth: 1,
     borderColor: "gainsboro",
     borderRadius: 4,
     color: "black",
@@ -253,8 +253,13 @@ const pickerSelectStyles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: "purple",
     borderRadius: 8,
-    color: "black",
-    //paddingRight: 30,
+    color: "rgba(0,0,0,0.7)",
+    width: 320,
+    height: 45,
+    backgroundColor: "whitesmoke",
+  },
+  placeholder: {
+    color: "rgba(0,0,0,0.3)",
   },
 });
 export default SubCategory;

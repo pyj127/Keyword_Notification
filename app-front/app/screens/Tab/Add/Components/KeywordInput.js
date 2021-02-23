@@ -4,22 +4,22 @@ const KeywordInput = ({ keywordValue, keywordChange }) => (
   <View style={styles.keword_in}>
     <TextInput
       value={keywordValue}
-      fontSize="16"
+      fontSize={16}
       textAlign="center"
       placeholder="알림을 받아보고 싶은 키워드를 입력하세요."
-      placeholderTextColor="dimgray"
+      placeholderTextColor="rgba(0,0,0,0.6)"
       onChangeText={keywordChange}
     />
   </View>
 );
 const styles = StyleSheet.create({
   keword_in: {
-    height: 50,
-    width: 330,
+    height: Platform.OS === "android" ? 45 : 50,
+    width: Platform.OS === "android" ? 320 : 330,
     backgroundColor: "whitesmoke",
-    marginTop: 30,
-    paddingTop: 13,
-    borderRadius: 6,
+    marginTop: Platform.OS === "android" ? 15 : 20,
+    paddingTop: Platform.OS === "android" ? 10 : 13,
+    borderRadius: Platform.OS === "android" ? 0 : 6,
   },
 });
 export default KeywordInput;

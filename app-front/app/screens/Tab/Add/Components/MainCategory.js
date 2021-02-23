@@ -54,8 +54,8 @@ const category = [
 ];
 
 const MainCategory = ({ main_cateValue, main_cateChange }) => (
-  <View>
-    <View paddingVertical={5} />
+  <View style={styles.container}>
+    <View paddingVertical={6} />
     <RNPickerSelect
       placeholder={{
         label: "알림을 등록할 단과대를 고르세요.",
@@ -70,17 +70,18 @@ const MainCategory = ({ main_cateValue, main_cateChange }) => (
   </View>
 );
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {},
+});
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
     fontSize: 16,
     paddingVertical: 12,
     paddingHorizontal: 10,
-    borderWidth: 1,
+    //borderWidth: 1,
     borderColor: "gainsboro",
     borderRadius: 4,
     color: "black",
-    //paddingRight: 30, // to ensure the text is never behind the icon
     backgroundColor: "whitesmoke",
     width: 330,
   },
@@ -88,11 +89,16 @@ const pickerSelectStyles = StyleSheet.create({
     fontSize: 16,
     paddingHorizontal: 10,
     paddingVertical: 8,
-    borderWidth: 0.5,
+    //borderWidth: 0.5,
     borderColor: "purple",
-    borderRadius: 8,
-    color: "black",
-    //paddingRight: 30,
+    //borderRadius: 15,
+    color: "rgba(0,0,0,0.7)",
+    width: 320,
+    height: 45,
+    backgroundColor: "whitesmoke",
+  },
+  placeholder: {
+    color: "rgba(0,0,0,0.3)",
   },
 });
 export default MainCategory;

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView, Alert } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Alert,
+  SafeAreaView,
+} from "react-native";
 import KeywordInput from "./Components/KeywordInput";
 import Button from "./Components/Button";
 import KeywordList from "./Components/KeywordList";
@@ -98,7 +105,7 @@ class AddScreen extends Component {
             sub_cateChange={(value) => this.sub_cateChange(value)}
           />
           <Button submitKeyword={this.submitKeyword} />
-          <ScrollView>
+          <ScrollView style={styles.scroll}>
             <KeywordList
               deleteKeyword={this.deleteKeyword}
               keywords={keywords}
@@ -115,22 +122,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    //flexWrap: "wrap",
+    paddingTop: Platform.OS === "android" ? 38 : 0,
   },
   header: {
     flex: 1,
     borderBottomColor: "gainsboro", // 회색
     borderBottomWidth: 1.5,
+    paddingBottom: 8,
   },
   header_title: {
     fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
-    paddingTop: 8,
+    paddingTop: Platform.OS === "android" ? 0 : 10,
     color: "dodgerblue",
   },
   bottom_container: {
-    flex: 13, //이거 더 증가시키면 헤더 부분 작아짐
+    flex: 18, //이거 더 증가시키면 헤더 부분 작아짐
     alignItems: "center",
+    paddingBottom: 15,
   },
 });

@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
   touch_container: {
     marginTop: 20,
     backgroundColor: "dodgerblue",
-    height: 50,
-    width: 330,
+    height: Platform.OS === "android" ? 45 : 50,
+    width: Platform.OS === "android" ? 320 : 330,
     borderRadius: 6,
   },
   button: {
     backgroundColor: "dodgerblue",
-    height: 50,
-    width: 330,
+    height: Platform.OS === "android" ? 45 : 50,
+    width: Platform.OS === "android" ? 320 : 330,
     borderRadius: 6,
     justifyContent: "center",
   },

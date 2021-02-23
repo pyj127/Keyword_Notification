@@ -20,6 +20,6 @@ export default KeywordList;
 const styles = StyleSheet.create({
   keyword: {
     marginTop: 15,
-    width: 370,
+    //width: 370,
   },
 });
