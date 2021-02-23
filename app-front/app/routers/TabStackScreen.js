@@ -8,6 +8,7 @@ import AddScreen from "../screens/Tab/Add/AddScreen";
 import SettingScreen from "../screens/Tab/SettingScreen";
 import DetailsScreen from "../screens/Tab/DetailsScreen";
 import Icon from "react-native-vector-icons/Entypo";
+//import { Entypo } from "@expo/vector-icons";
 
 const ListStack = createStackNavigator(); //여기서 home없애기
 
@@ -50,7 +51,7 @@ export default function TabStackScreen() {
         <Tab.Navigator
           initialRouteName="List"
           screenOptions={({ route }) => ({
-            tabBarIcon: ({ color, size }) => {
+            tabBarIcon: ({ color }) => {
               let iconName;
               if (route.name === "List") {
                 iconName = "list";
@@ -59,12 +60,18 @@ export default function TabStackScreen() {
               } else {
                 iconName = "cog";
               }
+              //return <Entypo name="bell" size={30} color={color} />;
               return <Icon name={iconName} size={30} color={color} />;
             },
           })}
           tabBarOptions={{
             activeTintColor: "dodgerblue",
             inactiveTintColor: "gray",
+            style: {
+              height: 55,
+              paddingTop: 6,
+              paddingBottom: 3,
+            },
           }}
         >
           <Tab.Screen name="List" component={ListStackScreen} />
