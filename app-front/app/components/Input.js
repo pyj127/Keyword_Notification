@@ -1,6 +1,6 @@
-import React, { useState, forwardRef } from 'react';
-import styled from 'styled-components/native';
-import PropTypes from 'prop-types';
+import React, { useState, forwardRef } from "react";
+import styled from "styled-components/native";
+import PropTypes from "prop-types";
 
 const Container = styled.View`
   flex-direction: column;
@@ -16,8 +16,8 @@ const Label = styled.Text`
 const StyledTextInput = styled.TextInput.attrs(({ theme }) => ({
   placeholderTextColor: theme.inputPlaceholder,
 }))`
-  background-color:  #ffffff;
-  color:  #000000;
+  background-color: #ffffff;
+  color: #000000;
   padding: 20px 10px;
   font-size: 16px;
   border: 1px solid;
@@ -81,7 +81,7 @@ Input.propTypes = {
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
   isPassword: PropTypes.bool,
-  returnKeyType: PropTypes.oneOf(['done', 'next']),
+  returnKeyType: PropTypes.oneOf(["done", "next"]),
   maxLength: PropTypes.number,
 };
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
-import AsyncStorage from '@react-native-community/async-storage';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import AsyncStorage from "@react-native-community/async-storage";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import {
   Text,
@@ -21,35 +21,34 @@ export default class LoginScreen extends Component {
     };
   }
   buttonClick() {
-    fetch('http://13.125.132.137:3000/login', {
+    fetch("http://13.125.132.137:3000/login", {
       method: "POST",
       headers: {
-        'CONTENT-TYPE': 'application/json',
+        "CONTENT-TYPE": "application/json",
       },
       body: JSON.stringify({
         id: this.state.id,
-        psword: this.state.pw}),
-      })
-    .then(response=>{
-      console.log(response);
-      return response.json();
-    }).then(data=>{
-      console.log(data.success);
-
-
-      if (data.success === true){
-        AsyncStorage.setItem('authInfo', JSON.stringify(data.result))
-        
-        // DB에 존재하는 회원데이터와 일치할 시 로그인 성공
-        this.props.navigation.navigate("TabStackScreen");
-      }
-      else{
-        console.log("로그인 실패");
-        Alert.alert("아이디 또는 비밀번호를 \n확인해주세요.");
-
-      }
+        psword: this.state.pw,
+      }),
     })
-  
+      .then((response) => {
+        //console.log(response);
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data.success);
+
+        if (data.success === true) {
+          AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
+
+          // DB에 존재하는 회원데이터와 일치할 시 로그인 성공
+          this.props.navigation.navigate("TabStackScreen");
+        } else {
+          //console.log("로그인 실패");
+          Alert.alert("아이디 또는 비밀번호를 \n확인해주세요.");
+        }
+      })
+      .catch((error) => Alert.alert(error));
   }
   render() {
     return (
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 55,
-    fontWeight: "900", //android에도 적용할려면 bold로 바꿔야 함
+    fontWeight: "bold", //android에도 적용할려면 bold로 바꿔야 함
     textAlign: "center",
     color: "gold",
     marginRight: 10,

@@ -90,25 +90,7 @@ export default ListScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-  header: {
-    flex: 1,
-    //backgroundColor: "blue",
-    backgroundColor: "white",
-    borderBottomColor: "gainsboro", // 회색
-    borderBottomWidth: 1.5,
-  },
-  header_title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    textAlign: "center",
-    paddingTop: 8,
-    color: "dodgerblue",
-  },
-  bottom_container: {
-    flex: 15, //이거 더 증가시키면 헤더 부분 작아짐
-    //backgroundColor: "dodgerblue",
+    //flex: 1,
   },
   message: {
     marginTop: 15,
@@ -118,15 +100,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft: 10,
     backgroundColor: "white",
-    width: 350,
-    borderRadius: 20,
-    height: 100,
-    paddingTop: 15,
+    width: Platform.OS === "android" ? 335 : 350,
+    borderRadius: Platform.OS === "android" ? 15 : 20,
+    height: Platform.OS === "android" ? 85 : 100,
+    paddingTop: Platform.OS === "android" ? 2 : 15,
   },
   message_title: {
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "left",
-    marginBottom: 5,
+    marginBottom: Platform.OS === "android" ? 3 : 5,
   },
 });

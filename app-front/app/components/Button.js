@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/native';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components/native";
+import PropTypes from "prop-types";
 
-const TRANSPARENT = 'transparent';
+const TRANSPARENT = "transparent";
 
 const Container = styled.TouchableOpacity`
   background-color: #3679fe;
@@ -10,8 +10,11 @@ const Container = styled.TouchableOpacity`
   border-radius: 4px;
   width: 100%;
   padding: 10px;
-  marginTop: 20px;
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)}; //버튼 클릭 가능 여부,button에서 props를 통해 전달되는 disabled 값에 따라 버튼 스타일 변경
+  margin: 10px;
+  opacity: ${({ disabled }) =>
+    disabled
+      ? 0.5
+      : 1}; //버튼 클릭 가능 여부,button에서 props를 통해 전달되는 disabled 값에 따라 버튼 스타일 변경
 `;
 const Title = styled.Text`
   height: 30px;
