@@ -12,5 +12,6 @@ router.get("/register", ctrl.output.register);
 //post 요청시 기능 수행
 router.post("/login", ctrl.process.login);
 router.post("/register", ctrl.process.register);
+router.post("/logout",ctrl.process.logout);
 
 module.exports=router;

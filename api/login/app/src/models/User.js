@@ -3,8 +3,9 @@
 const UserStorage = require("./UserStorage");
 
 class User{
-    constructor(body){
-        this.body=body;
+    constructor(req){
+        this.body=req.body;
+        this.session=req.session;
     }
 
     //console.log(UserStorage.getUserInfo(client.id)) 에서 안에 있는 함수가
@@ -15,6 +16,8 @@ class User{
          const { u_id, password } = await UserStorage.getUserInfo(client.id);
             if(u_id){
                 if(u_id=== client.id && password === client.psword){
+                    this.session.logined=true;
+                    this.session.u_id=u_id;
                     return {success : true};
                 }
                 return { success:false, msg:"비밀번호가 틀렸습니다." };
