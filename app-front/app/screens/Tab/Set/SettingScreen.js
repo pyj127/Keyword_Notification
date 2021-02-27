@@ -70,8 +70,6 @@ lists.push({
 
 const Item = React.memo(
   ({ item: { id, title, description }, onPress }) => {
-    console.log(`Item: ${id}`);
-
     return (
       <ItemContainer onPress={() => onPress({ id, title })}>
         <ItemTextContainer>
