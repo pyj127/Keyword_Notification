@@ -1,22 +1,46 @@
 import React from 'react';
-import { Button } from 'react-native';
+import { Alert } from 'react-native';
 import styled from 'styled-components/native';
+import { Button1 } from '../../../../../components';
+import { Button2 } from '../../../../../components';
 
-const Container = styled.SafeAreaView`
+const Container = styled.View`
+  flex: 1;
   background-color: #ffffff;
+  justify-content: center;
   align-items: center;
+  padding: 0 20px;
 `;
-const StyledText = styled.Text`
-  font-size: 30px;
-  margin-bottom: 10px;
+const Text = styled.Text`
+  font-size: 20px;
+  font-weight: 700;
+  color: dodgerblue;
+  align-self: center;
+  margin: 20px;
 `;
 
 const quit = ({ navigation }) => {
+
+  const _handleLogoutButtonPress = async () => {
+    try {
+      await logout();
+    } catch (e) {
+      console.log('[Profile] logout: ', e.message);
+    } finally {
+      dispatch({});
+    }
+  };
+
   return (
     <Container>
-      <StyledText>회원 탈퇴</StyledText>
-      <Button
-        title="go to the Account screen"
+      <Text>정말로 탈퇴 하시겠습니까?</Text>
+      <Button1
+        title="탈퇴하기"
+        onPress={_handleLogoutButtonPress}
+        containerStyle={{ marginTop: 30}}
+      />
+      <Button2
+        title="설정 화면으로 돌아가기"
         onPress={() => navigation.navigate('Account')}
       />
     </Container>

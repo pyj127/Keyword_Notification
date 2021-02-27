@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Button } from 'react-native';
+import { Button2 } from '../../../../components';
 
 const Title = styled.Text`
   font-size: 20px;
@@ -40,7 +41,7 @@ const ItemDescription = styled.Text`
 const lists = [];
 lists.push({
   id: 1,
-  title: `이메일 변경`,
+  title: `아이디 변경`,
 })
 lists.push({
   id: 2,
@@ -75,7 +76,7 @@ const SettingScreen = ({ navigation }) => {
 
   const _handleItemPress = item => {
     if (item.id === 1)
-      navigation.navigate('email');
+      navigation.navigate('id');
     if (item.id === 2)
       navigation.navigate('pw');
     if (item.id === 3)
@@ -94,8 +95,8 @@ const SettingScreen = ({ navigation }) => {
           <Item item={item} onPress={_handleItemPress} />
         )}
       />
-      <Button
-        title="go to the setting screen"
+      <Button2
+        title="설정화면으로 돌아가기"
         onPress={() => navigation.navigate('SettingScreen')}
       />
     </Container>

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components/native";
-import { Input, Button } from "../../components";
+import { Input, Button1, Button2 } from "../../components";
 import { Alert, Text, View, TouchableHighlight } from "react-native";
 //import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { validateEmail, removeWhitespace } from "../../utils/common";
@@ -129,13 +129,13 @@ const SignupScreen = ({ navigation }) => {
         isPassword
       />
       <ErrorText>{errorMessage}</ErrorText>
-      <Button
+      <Button1
         title="Signup"
         onPress={_handleSignupButtonPress}
         disabled={disabled}
       />
-      <Button
-        title="login"
+      <Button2
+        title="로그인 화면으로 돌아가기"
         onPress={() => navigation.navigate("LoginScreen")}
         underlayColor={"transparent"}
       />

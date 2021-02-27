@@ -6,7 +6,7 @@ import Condition from '../screens/Tab/Set/SetScreens/Condition';
 import Contact from '../screens/Tab/Set/SetScreens/Contact';
 import Personal from '../screens/Tab/Set/SetScreens/Personal';
 
-import email from '../screens/Tab/Set/SetScreens/Account/email';
+import id from '../screens/Tab/Set/SetScreens/Account/id';
 import pw from '../screens/Tab/Set/SetScreens/Account/pw';
 import logout from '../screens/Tab/Set/SetScreens/Account/logout';
 import quit from '../screens/Tab/Set/SetScreens/Account/quit';
@@ -23,7 +23,7 @@ export default createAppContainer(
       Condition,
       Contact,
       Personal,
-      email,
+      id,
       pw,
       logout,
       quit,
