@@ -41,7 +41,7 @@ const ItemDescription = styled.Text`
 const lists = [];
 lists.push({
   id: 1,
-  title: `아이디 변경`,
+  title: `이메일 변경`,
 })
 lists.push({
   id: 2,
@@ -76,7 +76,7 @@ const SettingScreen = ({ navigation }) => {
 
   const _handleItemPress = item => {
     if (item.id === 1)
-      navigation.navigate('id');
+      navigation.navigate('email');
     if (item.id === 2)
       navigation.navigate('pw');
     if (item.id === 3)

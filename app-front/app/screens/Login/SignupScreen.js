@@ -52,7 +52,7 @@ const SignupScreen = ({ navigation }) => {
       } else if (password.length < 6) {
         _errorMessage = "비밀번호는 6글자 이상이어야 합니다.";
       } else if (password !== passwordConfirm) {
-        _errorMessage = "비밀번호 확인이 맞나요?";
+        _errorMessage = "비밀번호가 동일하지 않습니다.";
       } else {
         _errorMessage = "";
       }

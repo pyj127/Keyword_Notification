@@ -29,7 +29,7 @@ const ErrorText = styled.Text`
 const PWScreen = ({ navigation }) => {
   const [id, setId] = useState("");
 
-  const _handleSignupButtonPress = ({ navigation }) => {
+  const _handleFindPWButtonPress = ({ navigation }) => {
     fetch("http://13.125.132.137:3000/register", {
       method: "POST",
       headers: {
@@ -68,7 +68,7 @@ const PWScreen = ({ navigation }) => {
         <Blank></Blank>
         <Button3
           title="비밀번호 찾기"
-          onPress={_handleSignupButtonPress}
+          onPress={_handleFindPWButtonPress}
         />
         <Button2
           title="로그인 화면으로 돌아가기"

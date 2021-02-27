@@ -62,7 +62,7 @@ const IDScreen = ({ navigation }) => {
     setDisabled(!(email && !errorMessage));
   }, [email, errorMessage]);
 
-  const _handleSignupButtonPress = ({ navigation }) => {
+  const _handleFindIDButtonPress = ({ navigation }) => {
     fetch("http://13.125.132.137:3000/register", {
       method: "POST",
       headers: {
@@ -99,7 +99,7 @@ const IDScreen = ({ navigation }) => {
       <ErrorText>{errorMessage}</ErrorText>
       <Button3
         title="아이디 찾기"
-        onPress={_handleSignupButtonPress}
+        onPress={_handleFindIDButtonPress}
         disabled={disabled}
       />
       <Button2

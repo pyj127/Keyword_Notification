@@ -10,7 +10,6 @@ const Container = styled.TouchableOpacity`
   border-radius: 4px;
   width: 100%;
   padding: 10px;
-  margin: 10px;
   opacity: ${({ disabled }) =>
     disabled
       ? 0.5
