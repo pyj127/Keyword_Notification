@@ -23,7 +23,7 @@ const Title = styled.Text`
   color: #ffffff;
 `;
 
-const Button = ({ containerStyle, title, onPress, isFilled }) => {
+const Button1 = ({ containerStyle, title, onPress, isFilled }) => {
   return (
     <Container
       style={containerStyle}
@@ -36,11 +36,11 @@ const Button = ({ containerStyle, title, onPress, isFilled }) => {
   );
 };
 
-Button.defaultProps = {
+Button1.defaultProps = {
   isFilled: true,
 };
 
-Button.propTypes = {
+Button1.propTypes = {
   containerStyle: PropTypes.object,
   title: PropTypes.string,
   onPress: PropTypes.func.isRequired,
@@ -48,4 +48,4 @@ Button.propTypes = {
   disabled: PropTypes.bool, //버튼 동작 여부 시각화
 };
 
-export default Button;
+export default Button1;
