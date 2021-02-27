@@ -66,7 +66,7 @@ const SignupScreen = ({ navigation }) => {
 
   useEffect(() => {
     setDisabled(!(email && password && !errorMessage));
-  }, [id, email, password, errorMessage]);
+  }, [email, password, errorMessage]);
 
   const _handleEmailChangeButtonPress = ({ navigation }) => {
     fetch("http://13.125.132.137:3000/register", {
@@ -122,7 +122,7 @@ const SignupScreen = ({ navigation }) => {
         disabled={disabled}
       />
       <Button2
-        title="설정 화면으로 돌아가기"
+        title="계정 관리 화면으로 돌아가기"
         onPress={() => navigation.navigate("Account")}
         underlayColor={"transparent"}
       />

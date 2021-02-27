@@ -126,7 +126,7 @@ const SignupScreen = ({ navigation }) => {
         disabled={disabled}
       />
       <Button2
-        title="환경설정 화면으로 돌아가기"
+        title="계정 관리 화면으로 돌아가기"
         onPress={() => navigation.navigate("Account")}
         underlayColor={"transparent"}
       />

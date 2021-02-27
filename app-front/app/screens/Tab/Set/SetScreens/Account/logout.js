@@ -40,7 +40,7 @@ const logout = ({ navigation }) => {
         containerStyle={{ marginTop: 30}}
       />
       <Button2
-        title="설정 화면으로 돌아가기"
+        title="계정 관리 화면으로 돌아가기"
         onPress={() => navigation.navigate('Account')}
       />
     </Container>

@@ -96,7 +96,7 @@ const SettingScreen = ({ navigation }) => {
         )}
       />
       <Button2
-        title="설정화면으로 돌아가기"
+        title="설정 화면으로 돌아가기"
         onPress={() => navigation.navigate('SettingScreen')}
       />
     </Container>
