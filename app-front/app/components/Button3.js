@@ -5,12 +5,11 @@ import PropTypes from "prop-types";
 const TRANSPARENT = "transparent";
 
 const Container = styled.TouchableOpacity`
-  background-color: #f5f5f5;
+  background-color: gold;
   align-items: center;
   border-radius: 4px;
   width: 100%;
   padding: 10px;
-  margin: 10px;
   opacity: ${({ disabled }) =>
     disabled
       ? 0.5
@@ -19,8 +18,8 @@ const Container = styled.TouchableOpacity`
 const Title = styled.Text`
   height: 30px;
   line-height: 30px;
-  font-size: 13px;
-  color: #606060;
+  font-size: 16px;
+  color: #000000;
 `;
 
 const Button2 = ({ containerStyle, title, onPress, isFilled }) => {
@@ -29,9 +28,8 @@ const Button2 = ({ containerStyle, title, onPress, isFilled }) => {
       style={containerStyle}
       onPress={onPress}
       isFilled={isFilled}
-      //disabled={disabled}
     >
-      <Title isFilled={isFilled}>{title}</Title>
+    <Title isFilled={isFilled}>{title}</Title>
     </Container>
   );
 };
