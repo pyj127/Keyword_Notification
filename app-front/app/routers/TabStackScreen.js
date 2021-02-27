@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
 import ListScreen from "../screens/Tab/ListScreen";
 import AddScreen from "../screens/Tab/Add/AddScreen";
-import SettingScreen from "../screens/Tab/SettingScreen";
+import SettingScreen from "../screens/Tab/Set/SettingScreen";
 import DetailsScreen from "../screens/Tab/DetailsScreen";
 import Icon from "react-native-vector-icons/Entypo";
 //import { Entypo } from "@expo/vector-icons";
