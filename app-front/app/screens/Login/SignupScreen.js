@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components/native";
 import { Input, Button1, Button2 } from "../../components";
-import { Alert, Text, View, TouchableHighlight } from "react-native";
-//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { Alert } from "react-native";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { validateEmail, removeWhitespace } from "../../utils/common";
 
 const Container = styled.View`
@@ -10,7 +10,7 @@ const Container = styled.View`
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  padding: 0 20px;
+  padding: 40px 20px;
 `;
 
 const ErrorText = styled.Text`
@@ -86,60 +86,62 @@ const SignupScreen = ({ navigation }) => {
   };
 
   return (
-    <Container>
-      <Input
-        label="ID"
-        value={id}
-        onChangeText={(text) => setId(text)}
-        onSubmitEditing={() => {
-          setId(id.trim());
-          emailRef.current.focus();
-        }}
-        onBlur={() => setId(id.trim())}
-        placeholder="ID"
-        returnKeyType="next"
-      />
-      <Input
-        ref={emailRef}
-        label="Email"
-        value={email}
-        onChangeText={(text) => setEmail(removeWhitespace(text))}
-        onSubmitEditing={() => passwordRef.current.focus()}
-        placeholder="Email"
-        returnKeyType="next"
-      />
-      <Input
-        ref={passwordRef}
-        label="Password"
-        value={password}
-        onChangeText={(text) => setPassword(removeWhitespace(text))}
-        onSubmitEditing={() => passwordConfirmRef.current.focus()}
-        placeholder="Password"
-        returnKeyType="done"
-        isPassword
-      />
-      <Input
-        ref={passwordConfirmRef}
-        label="Password Confirm"
-        value={passwordConfirm}
-        onChangeText={(text) => setPasswordConfirm(removeWhitespace(text))}
-        onSubmitEditing={_handleSignupButtonPress}
-        placeholder="Password"
-        returnKeyType="done"
-        isPassword
-      />
-      <ErrorText>{errorMessage}</ErrorText>
-      <Button1
-        title="Signup"
-        onPress={_handleSignupButtonPress}
-        disabled={disabled}
-      />
-      <Button2
-        title="로그인 화면으로 돌아가기"
-        onPress={() => navigation.navigate("LoginScreen")}
-        underlayColor={"transparent"}
-      />
-    </Container>
+    <KeyboardAwareScrollView extraScrollHeight={10}>
+      <Container>
+        <Input
+          label="ID"
+          value={id}
+          onChangeText={(text) => setId(text)}
+          onSubmitEditing={() => {
+            setId(id.trim());
+            emailRef.current.focus();
+          }}
+          onBlur={() => setId(id.trim())}
+          placeholder="ID"
+          returnKeyType="next"
+        />
+        <Input
+          ref={emailRef}
+          label="Email"
+          value={email}
+          onChangeText={(text) => setEmail(removeWhitespace(text))}
+          onSubmitEditing={() => passwordRef.current.focus()}
+          placeholder="Email"
+          returnKeyType="next"
+        />
+        <Input
+          ref={passwordRef}
+          label="Password"
+          value={password}
+          onChangeText={(text) => setPassword(removeWhitespace(text))}
+          onSubmitEditing={() => passwordConfirmRef.current.focus()}
+          placeholder="Password"
+          returnKeyType="done"
+          isPassword
+        />
+        <Input
+          ref={passwordConfirmRef}
+          label="Password Confirm"
+          value={passwordConfirm}
+          onChangeText={(text) => setPasswordConfirm(removeWhitespace(text))}
+          onSubmitEditing={_handleSignupButtonPress}
+          placeholder="Password"
+          returnKeyType="done"
+          isPassword
+        />
+        <ErrorText>{errorMessage}</ErrorText>
+        <Button1
+          title="Signup"
+          onPress={_handleSignupButtonPress}
+          disabled={disabled}
+        />
+        <Button2
+          title="로그인 화면으로 돌아가기"
+          onPress={() => navigation.navigate("LoginScreen")}
+          underlayColor={"transparent"}
+        />
+      </Container>
+    </KeyboardAwareScrollView>
   );
 };
 
