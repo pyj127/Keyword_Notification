@@ -90,6 +90,7 @@ const IDScreen = ({ navigation }) => {
   return (
     <Container>
       <Input
+        label={""}
         ref={emailRef}
         value={email}
         onChangeText={(text) => setEmail(removeWhitespace(text))}

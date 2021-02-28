@@ -1,9 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components/native";
 import { Input, Button1, Button2, Button3 } from "../../components";
 import { Alert } from "react-native";
-import { validateEmail, removeWhitespace } from "../../utils/common";
-import IDScreen from "./IDScreen";
 
 const Container = styled.View`
   flex: 1;
@@ -15,15 +13,6 @@ const Container = styled.View`
 
 const Blank = styled.Text`
   flex: 0.07;
-`;
-
-const ErrorText = styled.Text`
-  align-items: flex-start;
-  width: 100%;
-  height: 20px;
-  margin-bottom: 10px;
-  line-height: 20px;
-  color: #ff0000;
 `;
 
 const PWScreen = ({ navigation }) => {
@@ -49,7 +38,7 @@ const PWScreen = ({ navigation }) => {
           Alert.alert("휴대폰 인증을 진행합니다."); //PASS 앱
         } else {
           Alert.alert("가입된 정보가 없습니다. 아이디 찾기로 이동합니다.");
-          navigation.navigate("SignupScreen");
+          navigation.navigate("IDScreen");
         }
       });
   };
@@ -57,6 +46,7 @@ const PWScreen = ({ navigation }) => {
   return (
       <Container>
         <Input
+          label={""}
           value={id}
           onChangeText={(text) => setId(text)}
           onSubmitEditing={() => {
