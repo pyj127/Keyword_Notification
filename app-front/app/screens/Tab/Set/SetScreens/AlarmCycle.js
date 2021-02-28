@@ -1,24 +1,25 @@
 import React from 'react';
-import { Button } from 'react-native';
 import styled from 'styled-components/native';
 
-const Container = styled.SafeAreaView`
+const Container = styled.View`
+  flex: 1;
   background-color: #ffffff;
+  justify-content: center;
   align-items: center;
+  padding: 0 20px;
 `;
-const StyledText = styled.Text`
-  font-size: 30px;
-  margin-bottom: 10px;
+const Text = styled.Text`
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  align-self: center;
+  margin: 20px;
 `;
 
-const AlarmCycle = ({ navigation }) => {
+const AlarmCycle = () => {
   return (
     <Container>
-      <StyledText>알림 주기 설정</StyledText>
-      <Button
-        title="go to the setting screen"
-        onPress={() => navigation.navigate('SettingScreen')}
-      />
+      <Text>알림 주기 설정</Text>
     </Container>
   );
 };

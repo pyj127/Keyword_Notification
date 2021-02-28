@@ -9,7 +9,7 @@ import Icon from "react-native-vector-icons/Entypo";
 import ListScreen from "../screens/Tab/ListScreen";
 import AddScreen from "../screens/Tab/Add/AddScreen";
 import DetailsScreen from "../screens/Tab/DetailsScreen";
-import SettingSwitch from "./SettingSwitch";
+import SettingStack from "./SettingStack";
 
 const ListStack = createStackNavigator(); //여기서 home없애기
 
@@ -77,7 +77,7 @@ export default function TabStackScreen() {
         >
           <Tab.Screen name="List" component={ListStackScreen} />
           <Tab.Screen name="Add" component={AddScreen} />
-          <Tab.Screen name="Settings" children={({navigation})=><SettingSwitch/>}/>
+          <Tab.Screen name="Settings" children={()=><SettingStack/>}/>
         </Tab.Navigator>
       </SafeAreaView>
     </NavigationContainer>

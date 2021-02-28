@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components/native";
-import { Input, Button1, Button2, Button3 } from "../../../../../components";
+import { Input, Button1 } from "../../../../../components";
 import { Alert } from "react-native";
 import { validateEmail, removeWhitespace } from "../../../../../utils/common";
 
@@ -35,7 +35,7 @@ const ErrorText = styled.Text`
   color: #ff0000;
 `;
 
-const SignupScreen = ({ navigation }) => {
+const EmailChange = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -68,7 +68,7 @@ const SignupScreen = ({ navigation }) => {
     setDisabled(!(email && password && !errorMessage));
   }, [email, password, errorMessage]);
 
-  const _handleEmailChangeButtonPress = ({ navigation }) => {
+  const _handleEmailChangeButtonPress = () => {
     fetch("http://13.125.132.137:3000/register", {
       method: "POST",
       headers: {
@@ -84,11 +84,11 @@ const SignupScreen = ({ navigation }) => {
         return response.json();
       })
       .then((data) => {
+        Alert.alert("계정 분실, 개인정보 관련 고지 등에 사용되므로, 반드시 본인의 이메일을 입력해주세요. 변경하시겠습니까?");
         if (data.success === true) {
           Alert.alert("정상적으로 이메일이 변경되었습니다.");
-          navigation.navigate("LoginScreen");
         } else {
-          Alert.alert("입력한 정보를 확인해주세요.");
+          Alert.alert("계정 비밀번호가 올바르지 않습니다.");
         }
       });
   };
@@ -121,16 +121,11 @@ const SignupScreen = ({ navigation }) => {
         onPress={_handleEmailChangeButtonPress}
         disabled={disabled}
       />
-      <Button2
-        title="계정 관리 화면으로 돌아가기"
-        onPress={() => navigation.navigate("Account")}
-        underlayColor={"transparent"}
-      />
       <Blank></Blank>
       <Explanation>※반드시 본인의 이메일을 입력해주세요.</Explanation>
-      <Explanation>※계정 분실 시 아이디/비밀번호 착기, 개인정보 관련 주요 고지사항 안내 등에 사용됩니다.</Explanation>
+      <Explanation>※계정 분실 시 아이디/비밀번호 찾기, 개인정보 관련 주요 고지사항 안내 등에 사용됩니다.</Explanation>
     </Container>
   );
 };
 
-export default SignupScreen;
+export default EmailChange;

@@ -3,13 +3,6 @@ import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const Title = styled.Text`
-  font-size: 20px;
-  font-weight: 700;
-  color: dodgerblue;
-  align-self: flex-start;
-  margin: 20px;
-`;
 const Container = styled.SafeAreaView`
   flex: 1;
   background-color: #ffffff;
@@ -104,7 +97,6 @@ const SettingScreen = ({ navigation }) => {
 
   return (
     <Container>
-      <Title>설정</Title>
       <FlatList
         keyExtractor={item => item['id'].toString()}
         data={lists}
