@@ -17,7 +17,7 @@ const Blank = styled.Text`
 `;
 
 const Explanation = styled.Text`
-  flex: 0.2;
+  flex: 0.25;
   align-items: flex-start;
   width: 100%;
   height: 20px;

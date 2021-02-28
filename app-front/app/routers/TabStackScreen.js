@@ -3,12 +3,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
-import ListScreen from "../screens/Tab/ListScreen";
-import AddScreen from "../screens/Tab/Add/AddScreen";
-import SettingScreen from "../screens/Tab/Set/SettingScreen";
-import DetailsScreen from "../screens/Tab/DetailsScreen";
 import Icon from "react-native-vector-icons/Entypo";
 //import { Entypo } from "@expo/vector-icons";
+
+import ListScreen from "../screens/Tab/ListScreen";
+import AddScreen from "../screens/Tab/Add/AddScreen";
+import DetailsScreen from "../screens/Tab/DetailsScreen";
+import SettingSwitch from "./SettingSwitch";
 
 const ListStack = createStackNavigator(); //여기서 home없애기
 
@@ -76,7 +77,7 @@ export default function TabStackScreen() {
         >
           <Tab.Screen name="List" component={ListStackScreen} />
           <Tab.Screen name="Add" component={AddScreen} />
-          <Tab.Screen name="Settings" component={SettingScreen} />
+          <Tab.Screen name="Settings" children={({navigation})=><SettingSwitch/>}/>
         </Tab.Navigator>
       </SafeAreaView>
     </NavigationContainer>
