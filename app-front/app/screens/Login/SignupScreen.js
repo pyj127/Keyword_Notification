@@ -132,7 +132,7 @@ const SignupScreen = ({ navigation }) => {
           value={passwordConfirm}
           onChangeText={(text) => setPasswordConfirm(removeWhitespace(text))}
           onSubmitEditing={_handleSignupButtonPress}
-          placeholder="비밀번호"
+          placeholder="비밀번호 확인"
           returnKeyType="done"
           isPassword
         />
