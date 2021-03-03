@@ -13,5 +13,7 @@ router.get("/register", ctrl.output.register);
 router.post("/login", ctrl.process.login);
 router.post("/register", ctrl.process.register);
 router.post("/logout",ctrl.process.logout);
+router.post("/keyword/add",ctrl.process.addKey);
+router.post("/keyword/delete",ctrl.process.deleteKey);
 
 module.exports=router;
