@@ -1,10 +1,15 @@
 "use strict";
 
 const User = require("../../models/User");
+<<<<<<< HEAD
 const Keyword = require("../../models/keyword");
 const firebase = require("../../config/fdb");
 const firestore = firebase.firestore();
 
+=======
+const db=require("../../config/db");
+const KeyStorage=require("../../models/KeyStorage");
+>>>>>>> 25d3ffa0f188e679458363b88efc1bb9ec0125af
 const output ={
     hello: (req,res)=>{
         res.render("home/index");
@@ -27,7 +32,7 @@ const process = {
         return res.json(response);
     },
     register : async (req, res) => {
-        const user=new User(req.body);
+        const user=new User(req);
         const response=await user.register();
         return res.json(response);
     }
@@ -70,6 +75,40 @@ const db = {
         catch (error){
 
         res.status(400).send(error.message);
+        }
+    },
+    addKey : async (req, res)=>{
+        let response;
+        const client=req.body;
+        let p_id;
+        let u_id;
+        let k_id;
+        if(req.session.u_id){
+            u_id=req.session.u_id;
+            try{
+                p_id = await KeyStorage.getPageInfo(client.p_name);
+                k_id = await KeyStorage.saveKey(client, req.session);
+                response = await KeyStorage.saveAll(u_id, p_id, k_id);
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+            return res.json(response);
+        }
+        return res.json(response);
+    },
+    deleteKey : async (req, res)=>{
+        if(req.session){
+
+        }
+        else{
+            const response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
         }
     },
     
