@@ -72,13 +72,21 @@ const process = {
         return res.json(response);
     },
     deleteKey : async (req, res)=>{
-        if(req.session){
-
+        let response;
+        if(req.session.u_id){
+            try{
+                response=await KeyStorage.deleteReg(req.body.r_id);
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
         }
         else{
-            const response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
             console.log(response);
         }
+        return res.json(response);
     },
     
 };
