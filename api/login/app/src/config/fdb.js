@@ -1,7 +1,5 @@
 const firebase = require('firebase');
 
-let serAccount = require('./keyword-notification-firebase-admin-sdk.json')
-
 const fdb = firebase.initializeApp({
   apiKey: "AIzaSyAHaizKd_x9xZfvEFD4jfAgoxpNl4C3OZo",
   authDomain: "keyword-notification-57876.firebaseapp.com",
