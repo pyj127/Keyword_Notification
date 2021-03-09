@@ -1,9 +1,8 @@
 class Keyword {
-    constructor(id, keyword, name, date){
+    constructor(id, keyword, crawlData){
         this.id = id;
         this.keyword = keyword;
-        this.name = name;
-        this.date = date;
+        this.crawlData = crawlData;
     }
 }
 

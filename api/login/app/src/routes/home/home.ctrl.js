@@ -1,15 +1,13 @@
 "use strict";
 
 const User = require("../../models/User");
-<<<<<<< HEAD
+
 const Keyword = require("../../models/keyword");
 const firebase = require("../../config/fdb");
 const firestore = firebase.firestore();
 
-=======
 const db=require("../../config/db");
 const KeyStorage=require("../../models/KeyStorage");
->>>>>>> 25d3ffa0f188e679458363b88efc1bb9ec0125af
 const output ={
     hello: (req,res)=>{
         res.render("home/index");
@@ -27,18 +25,80 @@ const output ={
 
 const process = {
     login : async (req, res) => {
-        const user=new User(req.body);
+        const user=new User(req);
         const response=await user.login();
         return res.json(response);
     },
+    logout : async ( req, res)=>{
+
+	   	let response;
+	    	if(req.session.u_id){
+			response={success: true, id:req.session.u_id, msg:"로그아웃 성공"};
+			console.log(response);
+			req.session.destroy(
+
+				function(err){
+					if(err) console.log('세션 삭제 실패\n'+err);
+				}
+			);
+		}
+	    	else{
+			response={success:false, msg : "로그인 되어 있지 않은 사용자입니다."};
+			console.log(response);
+		}
+	    return res.json(response);
+	  },
     register : async (req, res) => {
         const user=new User(req);
         const response=await user.register();
         return res.json(response);
+    },
+
+    addKey : async (req, res)=>{
+        let response;
+        const client=req.body;
+        let p_id;
+        let u_id;	
+        let k_id;
+        if(req.session.u_id){
+            u_id=req.session.u_id;
+            try{
+                p_id = await KeyStorage.getPageInfo(client.p_name);
+                k_id = await KeyStorage.saveKey(client, req.session);
+                response = await KeyStorage.saveAll(u_id, p_id, k_id);
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+            return res.json(response);
+        }
+        return res.json(response);
+    },	
+    deleteKey : async (req, res)=>{
+        let response;
+        if(req.session.u_id){
+            try{
+                response=await KeyStorage.deleteReg(req.body.r_id);
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+        }
+        return res.json(response);
     }
 };
 
-const db = {
+const fdb = {
     send : async (req, res, next) => {
         try{
             const data = req.body;
@@ -76,43 +136,8 @@ const db = {
 
         res.status(400).send(error.message);
         }
-    },
-    addKey : async (req, res)=>{
-        let response;
-        const client=req.body;
-        let p_id;
-        let u_id;
-        let k_id;
-        if(req.session.u_id){
-            u_id=req.session.u_id;
-            try{
-                p_id = await KeyStorage.getPageInfo(client.p_name);
-                k_id = await KeyStorage.saveKey(client, req.session);
-                response = await KeyStorage.saveAll(u_id, p_id, k_id);
-                console.log(response);
-            }catch(err){
-                response=err;
-                console.log(response);
-            }
-        }
-        else{
-            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
-            console.log(response);
-            return res.json(response);
-        }
-        return res.json(response);
-    },
-    deleteKey : async (req, res)=>{
-        if(req.session){
-
-        }
-        else{
-            const response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
-            console.log(response);
-        }
-    },
-    
-    get_data : async (req, res, next) => {
+    }, 
+	get_data : async (req, res, next) => {
         try{
             const id = req.params.id;
             const keyword = await firestore.collection('keyword').doc(id);
@@ -158,5 +183,5 @@ const db = {
 module.exports={
     output,
     process,
-    db
+    fdb
 };
