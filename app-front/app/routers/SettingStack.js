@@ -11,8 +11,8 @@ import Personal from '../screens/Tab/Set/SetScreens/Personal';
 
 import EmailChange from '../screens/Tab/Set/SetScreens/Account/EmailChange';
 import PWChange from '../screens/Tab/Set/SetScreens/Account/PWChange';
-import Logout from '../screens/Tab/Set/SetScreens/Account/Logout';
-import Quit from '../screens/Tab/Set/SetScreens/Account/Quit';
+import Logout from '../screens/Tab/Set/SetScreens/Account/logout';
+import Quit from '../screens/Tab/Set/SetScreens/Account/quit';
 
 const Stack = createStackNavigator();
 

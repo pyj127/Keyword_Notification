@@ -71,6 +71,32 @@ class AddScreen extends Component {
     this.setState({ keywords, keywordValue: "" });
     this.setState({ main_categories, main_cateValue: "" }); //이것도 필요하면 배열로 만들기
     this.setState({ keywords, sub_cateValue: "" });
+
+    fetch("http://13.125.132.137:3000/add", {
+      method: "POST",
+      headers: {
+        "CONTENT-TYPE": "application/json",
+      },
+      body: JSON.stringify({
+        p_name: SubCategory.sub_cateValue,
+        keyword: this.state.keyword,
+      }),
+    })
+      .then((response) => {
+        //console.log(response);
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data.success);
+
+        if (data.success === true) {
+          AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
+          Alert.alert("u_id, p_id, k_id are saved successfully");
+        } else {
+          Alert.alert("키워드 추가가 불가능합니다.");
+        }
+      })
+
     Alert.alert("키워드 추가 완료");
   }
 
@@ -80,6 +106,32 @@ class AddScreen extends Component {
       (keyword) => keyword.keywordIndex !== keywordIndex
     );
     this.setState({ keywords });
+
+    fetch("http://13.125.132.137:3000/delete", {
+      method: "POST",
+      headers: {
+        "CONTENT-TYPE": "application/json",
+      },
+      body: JSON.stringify({
+        r_id: this.state.keywordIndex,
+      }),
+    })
+      .then((response) => {
+        //console.log(response);
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data.success);
+
+        if (data.success === true) {
+          AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
+          Alert.alert("성공적으로 삭제되었습니다.");
+        } else {
+          //console.log("로그인 실패");
+          Alert.alert("삭제가 불가능합니다.");
+        }
+      })
+
   }
 
   render() {

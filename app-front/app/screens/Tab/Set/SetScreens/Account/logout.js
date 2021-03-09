@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { Button1 } from '../../../../../components';
+import { Alert } from "react-native";
+import AsyncStorage from '@react-native-community/async-storage';
+import LoginScreen from '../../../../Login/LoginScreen';
 
 const Container = styled.View`
   flex: 1;
@@ -20,14 +23,31 @@ const Text = styled.Text`
 const Logout = ({navigation}) => {
 
   const _handleLogoutButtonPress = async () => {
-    try {
-      await logout();
-      navigation.navigate("LoginScreen");
-    } catch (e) {
-      console.log('[Profile] logout: ', e.message);
-    } finally {
-      dispatch({});
-    }
+    fetch("http://13.125.132.137:3000/logout", {
+      method: "POST",
+      headers: {
+        "CONTENT-TYPE": "application/json",
+      },
+      body: JSON.stringify({
+        id: 1,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // 로그아웃 아이디 저장
+        if (data.success === true) {
+          AsyncStorage.setItem("LogoutInfo", JSON.stringify(data.result));
+
+          // DB에 존재하는 회원데이터와 일치할 시 로그아웃 성공
+          this.props.navigation.navigate("SignupScreen");
+        } else {
+          //console.log("로그인 실패");
+          Alert.alert("로그아웃 실패");
+        }
+      })
+      .catch((error) => Alert.alert(error));
   };
 
   return (
@@ -43,3 +63,10 @@ const Logout = ({navigation}) => {
 };
 
 export default Logout;
+
+/*
+     AsyncStorage.getItem('AuthInfo')
+        .then((value)=>{
+          this.setState({id:value})
+      })
+*/

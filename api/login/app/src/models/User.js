@@ -23,6 +23,7 @@ class User{
                 return { success:false, msg:"비밀번호가 틀렸습니다." };
             }
         }catch(e){
+		console.log(e);
             return { success: false, msg: "존재하지 않는 아이디입니다." };
         }
     }

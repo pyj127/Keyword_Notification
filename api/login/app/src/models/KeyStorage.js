@@ -48,15 +48,37 @@ class KeyStorage{
                         [u_id, p_id, k_id],
                         (err, data)=>{
                         if(err) reject({success: false, msg: err});
-                        else{resolve({ msg : "u_id, p_id, k_id are saved successfully", r_id : data.insertId });}
+                        else{resolve({ success : true, msg : "u_id, p_id, k_id are saved successfully", r_id : data.insertId });}
                     });
                 }
                 else{
                     console.log("이미 해당 registration은 저장되어 있습니다.");
-                    reject({ success : false, msg : "이미 해당 registration은 저장되어 있습니다.", r_id : data[0].r_id});
+                    reject({ success : false, msg : "이미 해당 등록은 저장되어 있습니다.", r_id : data[0].r_id});
                 }
             });
         });   
+
+    }
+
+    static async deleteReg(r_id){
+        return new Promise((resolve, reject)=>{
+            db.query("SELECT * FROM registration WHERE r_id=?",[r_id],(err,data)=>{
+                if(data.length==0){
+                    console.log("해당 registration은 존재하지 않습니다.");
+                    reject({success : false, msg : "해당 등록이 존재하지 않습니다."});
+                }
+                else{
+                    db.query("DELETE FROM registration WHERE r_id=?",[r_id],(err,data)=>{
+                        if(err) reject({success:false,msg:err});
+                        else{
+                            console.log("성공적으로 삭제되었습니다.");
+                            resolve({success : true, msg: "성공적으로 삭제되었습니다.", r_id : r_id})
+                        };
+                    })
+                }
+                if(err) reject({success:false, msg:err});
+            });
+        });
 
     }
 
