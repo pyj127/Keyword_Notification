@@ -1,4 +1,4 @@
-# Keyword_Notification(2021.01 - 2020.03)
+# Keyword_Notification(2021.01 - 2021.03)
 > 2021 KEY Team Project
 
 ## 🏡 팀 소개
@@ -136,7 +136,7 @@
 
 ``` bash
 # go to directory
-$ cd /front-end
+$ cd app-front
 
 # install dependencies
 $ npm install # Or yarn install
@@ -155,7 +155,7 @@ $ npm run generate
 
 ``` bash
 # go to directory
-$ cd /back-end
+$ cd api
 
 # install node and npm (in ubuntu)
 $ sudo apt-get update 
