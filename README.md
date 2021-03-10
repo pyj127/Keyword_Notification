@@ -91,32 +91,41 @@
 **Tools** `Visual Studio Code` `Notion` `Microsoft 365`
 
 ## 2. directory description
-### 2.1 /front-end  
+### 2.1 api
     - ReactNative로 구헌된 front-end 코드
-    - [코드 설명]()
+    - [README](https://github.com/julie0005/Keyword_Notification/blob/master/api/README.md)
 
-### 2.2 /back-end
+### 2.2 app-front
     - AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
-    - [코드 설명]()
+    - [README](https://github.com/julie0005/Keyword_Notification/blob/master/app-front/README.md)
+
+### 2.3 db
+    -크롤링 및 sql 구현
+    -[README](https://github.com/julie0005/Keyword_Notification/blob/master/db/README.md)
+### 2.4 meeting_note
+    -회의록, notion으로 기록 후 옮김
 
 ## 3. Development result
 
 ### 로그인 화면
+![로그인]()
+
+#### id 찾기 화면
+![id 찾기]()
+#### 비밀번호 찾기 화면
+![비밀번호 찾기]()
+#### 회원가입 화면
+![회원가임]()
+
 ### Main 화면
+![메인]()
 
-![mnm1]()
-
-### 3.1 공지사항 읽어오기
-
-![mnm2]()
-
-### 3.2 keyword 추가
-
-![mnm3]()
-
-### 3.3 Setting 화면
-
-![mnm4]()
+#### list 화면
+![리스트]()
+#### keyword 추가 화면
+![키워드 추가]()
+#### Setting 화면
+![설정]()
 
 ## 4. How to process
 
