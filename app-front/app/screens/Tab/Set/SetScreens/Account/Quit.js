@@ -18,7 +18,7 @@ const Text = styled.Text`
   margin: 20px;
 `;
 
-const Q = ({navigation}) => {
+const Quit = ({navigation}) => {
 
   const _handleLogoutButtonPress = async () => {
     try {
@@ -43,4 +43,4 @@ const Q = ({navigation}) => {
   );
 };
 
-export default Q;
+export default Quit;

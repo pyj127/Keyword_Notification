@@ -20,7 +20,7 @@ const Text = styled.Text`
   margin: 20px;
 `;
 
-const Log = ({navigation}) => {
+const Logout = ({navigation}) => {
 
   const _handleLogoutButtonPress = async () => {
     fetch("http://13.125.132.137:3000/logout", {
@@ -64,4 +64,4 @@ const Log = ({navigation}) => {
   );
 };
 
-export default Log;
+export default Logout;
