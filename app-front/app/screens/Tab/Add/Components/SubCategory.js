@@ -202,27 +202,27 @@ const SubCategory = ({ main_cateValue, sub_cateValue, sub_cateChange }) => (
         color: "black",
       }}
       items={
-        main_cateValue === "portal"
+        main_cateValue === "아주대학교 포탈"
           ? nul
-          : main_cateValue === "eng"
+          : main_cateValue === "공과대학"
           ? eng
-          : main_cateValue === "it"
+          : main_cateValue === "정보통신대학"
           ? it
-          : main_cateValue === "ns"
+          : main_cateValue === "자연과학대학"
           ? ns
-          : main_cateValue === "biz"
+          : main_cateValue === "경영대학"
           ? biz
-          : main_cateValue === "human"
+          : main_cateValue === "인문대학"
           ? human
-          : main_cateValue === "coss"
+          : main_cateValue === "사회과학대학"
           ? coss
-          : main_cateValue === "medicine"
+          : main_cateValue === "의과대학"
           ? medicine
-          : main_cateValue === "nursing"
+          : main_cateValue === "간호대학"
           ? nursing
-          : main_cateValue === "pharm"
+          : main_cateValue === "약학대학"
           ? pharm
-          : main_cateValue === "uc"
+          : main_cateValue === "다산학부대학"
           ? uc
           : isa
       }

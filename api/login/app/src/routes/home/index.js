@@ -25,6 +25,10 @@ router.delete('/keyword/:id', ctrl.fdb.delete);
 router.post("/logout",ctrl.process.logout);
 router.post("/keyword/add",ctrl.process.addKey);
 router.post("/keyword/delete",ctrl.process.deleteKey);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 79e38063e46889f3ce33f42143fb4e49c3f09ceb
 
 
 module.exports=router;

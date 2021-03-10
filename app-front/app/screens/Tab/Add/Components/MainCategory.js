@@ -5,51 +5,51 @@ import RNPickerSelect, { defaultStyles } from "react-native-picker-select";
 const category = [
   {
     label: "아주대학교 포탈",
-    value: "portal",
+    value: "아주대학교 포탈",
   },
   {
     label: "공과대학",
-    value: "eng",
+    value: "공과대학",
   },
   {
     label: "정보통신대학",
-    value: "it",
+    value: "정보통신대학",
   },
   {
     label: "자연과학대학",
-    value: "ns",
+    value: "자연과학대학",
   },
   {
     label: "경영대학",
-    value: "biz",
+    value: "경영대학",
   },
   {
     label: "인문대학",
-    value: "human",
+    value: "인문대학",
   },
   {
     label: "사회과학대학",
-    value: "coss",
+    value: "사회과학대학",
   },
   {
     label: "의과대학",
-    value: "medicine",
+    value: "의과대학",
   },
   {
     label: "간호대학",
-    value: "nursing",
+    value: "간호대학",
   },
   {
     label: "약학대학",
-    value: "pharm",
+    value: "약학대학",
   },
   {
     label: "다산학부대학",
-    value: "uc",
+    value: "다산학부대학",
   },
   {
     label: "국제학부",
-    value: "isa",
+    value: "국제학부",
   },
 ];
 

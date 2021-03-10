@@ -27,12 +27,14 @@ const Logout = ({navigation}) => {
       method: "POST",
       headers: {
         "CONTENT-TYPE": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify({
         id: 1,
       }),
     })
       .then((response) => {
+        console.log(response);
         return response.json();
       })
       .then((data) => {
