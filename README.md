@@ -42,53 +42,61 @@
 <img >
 
 ### javascript >
-    프로젝트 전반에서 사용
-
+    프로젝트 전반에서 사용하였다. 다른 언어에 비해 배우기 쉽고 개발 시간이 짧고 다양한 프로그래밍 언어 및 여러 데이터베이스와 같은 서버측 프로그램과 긴밀히 통합될 수 있다.
 ### Python >
-    웹 크롤링을 하기 위한 다양한 모듈을 지원해주는 python을 이용해 웹페이지 정보를 가져올 예정입니다. 
+    웹 크롤링을 할 때 사용하였다. 웹 크롤링을 하기 위한 다양한 모듈을 지원해주고 타입에 대해 자유롭기 때문에 런타임 데이터를 기반으로 한 기능과 자료형을 만들 수 있다.
 ### Node.js>
-    api구현을 위해 사용,  빠른 개발과 처리를 위해 node.js
-### RDBMS >   
-    - MySQL: 사용자, 키워드, 페이지에 대한 정보 저장
-    - Firebase: 푸시 알림 기능 구현
+    api구현을 위해 사용하였다. 개발이 빠르고 쉽다. 서버 설치부터 화면 띄우는 것까지 금방 처리 되고 npm을 이용해 자신이 필요한 라이브러리와 패키지를 검색해서 설치하고 사용할 수 있기 때문에 개발속도와 효율성이 크게 향상된다.
+
+### MySQL>
+    사용자, 키워드, 페이지에 대한 정보 저장을 할 때 사용하였다. 가장 레퍼런스가 많은 RDB(관계형 데이터베이스)로 문제 발생 시 진단 및 해결이 쉽다.
+
+### MySQL WorkBench>
+    SQL 개발과 관리, 데이터베이스 설계, 생성 그리고 유지를 위한 단일 개발 통합 환경을 제공하는 비주얼 데이터베이스 설계 도구이다.
+### Firebase >   
+    푸시 알림 기능 구현을 위해 사용하였다.
 ### Amazon EC2 >
-    프로세싱한 데이터를 front-end로 API를 공급하는 Server (in AWS EC2)  
+    프로세싱한 데이터를 front-end로 API를 공급하는 Server로 사용하였다.클라우드에서 안전하고 확장이 가능한 컴퓨팅 용량을 제공하는 웹 서비스입니다.
 ### ReactNative >
-    app-front에서 어플 개발을 위해 사용 
+    app-front에서 어플 개발을 위해 사용하였다. iOS, android 동시 개발이 가능하고 javascript의 문법을 사용한다.
 ### ExpressJS >
+    Node.js 개발에서 개발을 빠르고 손쉽게 할 수 있도록 도와주는 역할을 한다.
 
+### Git>
+    버전 관리를 위해 사용하였다. 버전 관리(VCS/SCM)로서 가장 널리 사용하는 VCS이다.
 ### GitHub >
-    공동작업을 위해 사용, 버전관리
-### Notion >
-    공동작업을 위해 사용 , 주요 문서작업
+    공동작업을 위해 사용하였다.Git 호스팅 및 코드 공유 저장소로 가장 널리 사용하는 플랫폼이다.
 ### VisualStudioCode >
-    공동작업을 위해 사용
+    공동작업을 위해 사용하였다. 디버깅 지원과 Git 제어가 가능한 소스 코드 편집기이다.
+### Notion >
+    메인 문서 공동 작업 도구로서 주요 문서작업을 하는 데 사용하였다.
 
+###  Microsoft 365>
+    보조 문서 공동 작업 도구. Microsoft PowerPoint로 발표 자료를 만들었다.
 
+**BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
 
-**BackEnd** `Java8` `Spring Boot 2.3`
+**Database** `MySQL` `MySQLWorkBench`
 
-**Database** `MariaDB 10.3` 
+**crawling** `Python`
 
-**Server** `AWS EC2`
+**Server** `AWS EC2` `Firebase`
 
-**CI/CD** `Jenkins`
-
-**FrontEnd** `Javascript` `Vue.js`
+**FrontEnd** `Javascript` `ReactNative`
 
 **Version Control** `Git`
 
 **Repository** `Github`
 
+**Tools** `Visual Studio Code` `Notion` `Microsoft 365`
+
 ## 2. directory description
 ### 2.1 /front-end  
-    - Netlify로 자동으로 변경 및 배포되는 front-end 코드
-    - SSR와 CSR(SPA)의 장점을 가지도록 Nuxt  
+    - ReactNative로 구헌된 front-end 코드
     - [코드 설명]()
 
 ### 2.2 /back-end
     - AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
-    - js로 짜놓은 서버 코드를 ts로 수정하는 
     - [코드 설명]()
 
 ## 3. Development result
@@ -96,19 +104,19 @@
 ### 로그인 화면
 ### Main 화면
 
-![mnm1](https://user-images.githubusercontent.com/46476398/92077322-21eb5f80-edf7-11ea-90d1-b3e813ae5704.JPG)
+![mnm1]()
 
 ### 3.1 공지사항 읽어오기
 
-![mnm2](https://user-images.githubusercontent.com/46476398/92077324-231c8c80-edf7-11ea-8c02-b13cfc76a001.JPG)
+![mnm2]()
 
 ### 3.2 keyword 추가
 
-![mnm3](https://user-images.githubusercontent.com/46476398/92077325-23b52300-edf7-11ea-894d-b5fdd9ef35eb.JPG)
+![mnm3]()
 
 ### 3.3 Setting 화면
 
-![mnm4](https://user-images.githubusercontent.com/46476398/92077326-244db980-edf7-11ea-9ff5-65782d053c27.JPG)
+![mnm4]()
 
 ## 4. How to process
 
