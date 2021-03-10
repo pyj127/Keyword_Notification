@@ -11,7 +11,7 @@
 - [우다현](https://github.com/defwdahyun0)
 - [한동민](https://github.com/handevmin)
 
-## 🗺 **서비스 소개**
+## 🔑 **서비스 소개**
 
 <br/>
 
@@ -73,6 +73,8 @@
 
 ###  Microsoft 365>
     보조 문서 공동 작업 도구. Microsoft PowerPoint로 발표 자료를 만들었다.
+ 
+--
 
 **BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
 
@@ -89,6 +91,8 @@
 **Repository** `Github`
 
 **Tools** `Visual Studio Code` `Notion` `Microsoft 365`
+
+--
 
 ## 2. directory description
 ### 2.1 /front-end  
