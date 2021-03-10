@@ -37,9 +37,7 @@
 
 <br/>
 
-## 1. Technology used  🛠
-
-<img >
+## 1. Technology used
 
 ### javascript >
     프로젝트 전반에서 사용하였다. 다른 언어에 비해 배우기 쉽고 개발 시간이 짧고 다양한 프로그래밍 언어 및 여러 데이터베이스와 같은 서버측 프로그램과 긴밀히 통합될 수 있다.
@@ -74,7 +72,7 @@
 ###  Microsoft 365>
     보조 문서 공동 작업 도구. Microsoft PowerPoint로 발표 자료를 만들었다.
  
---
+<br/>
 
 **BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
 
@@ -92,9 +90,9 @@
 
 **Tools** `Visual Studio Code` `Notion` `Microsoft 365`
 
---
+<br/>
 
-## 2. directory description
+## 2. Directory description
 ### 2.1 api
     - ReactNative로 구헌된 front-end 코드
 [README](https://github.com/julie0005/Keyword_Notification/blob/master/api/README.md)
