@@ -18,7 +18,9 @@ class User{
                 if(u_id=== client.id && password === client.psword){
                     this.session.logined=true;
                     this.session.u_id=u_id;
-                    return {success : true};
+                    const arr=await UserStorage.getRegInfo(u_id);
+                    console.log(arr);
+                    return {success : true, r_id_arr : arr};
                 }
                 return { success:false, msg:"비밀번호가 틀렸습니다." };
             }
@@ -37,6 +39,39 @@ class User{
             return { success: false, msg: err };
         }
     }
+    //request body 안에 email 정보 있어야.
+    async findId(){
+        const client=this.body;
+        try{
+            const u_id = await UserStorage.getIdInfo(client.email);
+            if(u_id){
+                return {success : true, id : u_id};
+            }
+        }catch(err){
+            return {success : false, msg:"존재하지 않는 계정입니다."};
+        }
+
+    }
+    //request body 안에 id 있어야.
+    async findPw(){
+        let i;
+        const client=this.body;
+        try{
+            const password = await UserStorage.getPassInfo(client.id);
+            if(password){
+                let str='';
+                for(i=0; i<password.length-2; i++){
+                    str+='*';
+                }
+                str+=password.slice(-2,password.length);
+                return {success : true, password : str};
+            }
+        }catch(err){
+            return {success : false, msg:"존재하지 않는 계정입니다."};
+        }
+    }
+
+    
 
 }
 
