@@ -96,18 +96,19 @@
 
 ## 2. directory description
 ### 2.1 api
-    - ReactNative로 구헌된 front-end 코드
-    - [README](https://github.com/julie0005/Keyword_Notification/blob/master/api/README.md)
+ReactNative로 구헌된 front-end 코드
+[README](https://github.com/julie0005/Keyword_Notification/blob/master/api/README.md)
 
 ### 2.2 app-front
-    - AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
-    - [README](https://github.com/julie0005/Keyword_Notification/blob/master/app-front/README.md)
+AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
+[README](https://github.com/julie0005/Keyword_Notification/blob/master/app-front/README.md)
 
 ### 2.3 db
-    -크롤링 및 sql 구현
-    -[README](https://github.com/julie0005/Keyword_Notification/blob/master/db/README.md)
+크롤링 및 sql 구현
+[README](https://github.com/julie0005/Keyword_Notification/blob/master/db/README.md)
+
 ### 2.4 meeting_note
-    -회의록, notion으로 기록 후 옮김
+회의록, notion으로 기록 후 옮김
 
 ## 3. Development result
 
