@@ -72,26 +72,24 @@ class AddScreen extends Component {
     this.setState({ main_categories, main_cateValue: "" }); //이것도 필요하면 배열로 만들기
     this.setState({ keywords, sub_cateValue: "" });
 
-    fetch("http://13.125.132.137:3000/add", {
+    fetch("http://13.125.132.137:3000/keyword/add", {
+
       method: "POST",
       headers: {
         "CONTENT-TYPE": "application/json",
       },
       body: JSON.stringify({
-        p_name: SubCategory.sub_cateValue,
-        keyword: this.state.keyword,
+        p_name: main_category.title,
+        keyword: keyword.title,
       }),
     })
       .then((response) => {
-        //console.log(response);
         return response.json();
       })
       .then((data) => {
-        //console.log(data.success);
 
         if (data.success === true) {
-          AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
-          Alert.alert("u_id, p_id, k_id are saved successfully");
+          Alert.alert("정상적으로 키워드가 추가되었습니다.");
         } else {
           Alert.alert("키워드 추가가 불가능합니다.");
         }
@@ -124,7 +122,6 @@ class AddScreen extends Component {
         //console.log(data.success);
 
         if (data.success === true) {
-          AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
           Alert.alert("성공적으로 삭제되었습니다.");
         } else {
           //console.log("로그인 실패");
