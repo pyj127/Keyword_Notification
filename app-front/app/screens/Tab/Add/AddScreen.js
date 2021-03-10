@@ -89,6 +89,9 @@ class AddScreen extends Component {
       .then((data) => {
 
         if (data.success === true) {
+
+        console.log(data.r_id);
+        console.log(keywordIndex);
           Alert.alert("정상적으로 키워드가 추가되었습니다.");
         } else {
           Alert.alert("키워드 추가가 불가능합니다.");
@@ -105,7 +108,7 @@ class AddScreen extends Component {
     );
     this.setState({ keywords });
 
-    fetch("http://13.125.132.137:3000/delete", {
+    fetch("http://13.125.132.137:3000/keyword/delete", {
       method: "POST",
       headers: {
         "CONTENT-TYPE": "application/json",
@@ -119,7 +122,7 @@ class AddScreen extends Component {
         return response.json();
       })
       .then((data) => {
-        //console.log(data.success);
+
 
         if (data.success === true) {
           Alert.alert("성공적으로 삭제되었습니다.");
