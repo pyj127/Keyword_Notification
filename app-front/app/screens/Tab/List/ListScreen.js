@@ -20,14 +20,14 @@ const ItemTextContainer = styled.View`
 `;
 const ItemTitle = styled.Text`
   font-size: 17px;
-  font-weight: 900;
+  font-weight: bold;
 `;
 const ItemDescription = styled.Text`
   font-size: 13px;
   margin-top: 5px;
-  color: #101010;
+  color: #000000;
 `;
-const Time = styled.Text`
+const Date = styled.Text`
   font-size: 11px;
   color: #808080;
 `;
@@ -35,6 +35,7 @@ const Department = styled.Text`
   font-size: 11px;
   color: #1E90FF;
 `;
+// dedgerblue: #1E90FF
 
 const lists = [];
 lists.push({
@@ -50,7 +51,7 @@ lists.push({
 })
 lists.push({
   id: 2,
-  title: `[생활관]2021년 1학기 생활관 입사 추가 신청 안내`,
+  title: `[생활관] 2021년 1학기 생활관 입사 추가 신청 안내`,
   description: `이미지 파일입니다. 클릭해서 확인해주세요.`,
   depart: `생활관`,
   date: '2021-03-10',
@@ -109,10 +110,9 @@ const Item = React.memo(
     return (
       <ItemContainer onPress={() => onPress({ id, title })}>
         <ItemTextContainer>
-          <Time>{date}</Time>
           <ItemTitle>{title}</ItemTitle>
           <ItemDescription>{description}</ItemDescription>
-          <Department>{depart}</Department>
+          <Department>{depart}   <Date>{date}</Date>   </Department>
         </ItemTextContainer>
       </ItemContainer>
     );
@@ -131,7 +131,8 @@ const ListScreen = ({ navigation }) => {
         keyExtractor={item => item['id'].toString()}
         data={lists}
         renderItem={({ item }) => (
-          <Item item={item} onPress={_handleItemPress} />
+          <Item item={item} onPress={_handleItemPress} 
+        />
         )}
         windowSize={3} //한 화면만 미리 불러오기
       />

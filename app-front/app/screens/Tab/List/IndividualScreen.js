@@ -20,14 +20,14 @@ const ItemTextContainer = styled.View`
 `;
 const ItemTitle = styled.Text`
   font-size: 17px;
-  font-weight: 900;
+  font-weight: bold;
 `;
 const ItemDescription = styled.Text`
   font-size: 13px;
   margin-top: 5px;
-  color: #101010;
+  color: #000000;
 `;
-const Time = styled.Text`
+const Date = styled.Text`
   font-size: 11px;
   color: #808080;
 `;
@@ -109,10 +109,9 @@ const Item = React.memo(
     return (
       <ItemContainer onPress={() => onPress({ id, title })}>
         <ItemTextContainer>
-          <Time>{date}</Time>
           <ItemTitle>{title}</ItemTitle>
           <ItemDescription>{description}</ItemDescription>
-          <Department>{depart}</Department>
+          <Department>{depart}   <Date>{date}</Date>   </Department>
         </ItemTextContainer>
       </ItemContainer>
     );
