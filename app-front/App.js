@@ -2,6 +2,7 @@
 import React from 'react';
 import {ToastAndroid, BackHandler} from "react-native";
 import Switch from "./app/routers/Switch";
+import Tab from "./app/routers/TabStackScreen";
 
 export default class App extends React.Component {
 
@@ -47,7 +48,7 @@ export default class App extends React.Component {
   }
 
   render(){
-    return <Switch />;
+    return <Tab />;
   }
 
 }
