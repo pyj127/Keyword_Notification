@@ -78,6 +78,7 @@ const IDScreen = ({ navigation }) => {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         if (data.success === true) {
           Alert.alert("이메일에서 아이디를 확인해주세요.");
           navigation.navigate("LoginScreen");

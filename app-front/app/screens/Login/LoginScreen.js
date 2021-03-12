@@ -36,7 +36,7 @@ export default class LoginScreen extends Component {
         return response.json();
       })
       .then((data) => {
-        //console.log(data.success);
+        console.log(data);
 
         if (data.success === true) {
           AsyncStorage.setItem("authInfo", JSON.stringify(data.result));
