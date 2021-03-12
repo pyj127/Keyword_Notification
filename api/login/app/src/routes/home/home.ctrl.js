@@ -8,6 +8,7 @@ const firestore = firebase.firestore();
 
 const db=require("../../config/db");
 const KeyStorage=require("../../models/KeyStorage");
+const UserStorage = require("../../models/UserStorage");
 const output ={
     hello: (req,res)=>{
         res.render("home/index");
@@ -23,7 +24,7 @@ const output ={
 
 };
 
-const process = {
+const account = {
     login : async (req, res) => {
         const user=new User(req);
         const response=await user.login();
@@ -53,7 +54,43 @@ const process = {
         const response=await user.register();
         return res.json(response);
     },
+    findId : async(req,res)=>{
+        const user=new User(req);
+        const response=await user.findId();
+        return res.json(response);
+    },
+    findPw : async(req,res)=>{
+        const user=new User(req);
+        const response=await user.findPw();
+        return res.json(response);
+    },
+    quit : async(req,res)=>{
+        let response;
+        if(req.session.u_id){
+            try{
+                response=await UserStorage.deleteAll(req.session.u_id);
+                req.session.destroy(
 
+                    function(err){
+                        if(err) console.log('세션 삭제 실패\n'+err);
+                    }
+                );
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+        }
+        return res.json(response);
+    }
+    
+};
+
+const keyManage = {
     addKey : async (req, res)=>{
         let response;
         const client=req.body;
@@ -96,7 +133,7 @@ const process = {
         }
         return res.json(response);
     }
-};
+}
 
 const fdb = {
     send : async (req, res, next) => {
@@ -178,14 +215,14 @@ const fdb = {
         }
     }
 
-}
+};
 
 module.exports={
     output,
-    process,
-    fdb
-<<<<<<< HEAD
+    account,
+    fdb,
+    keyManage
 };
-=======
-};
->>>>>>> 79e38063e46889f3ce33f42143fb4e49c3f09ceb
+
+
+

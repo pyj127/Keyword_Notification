@@ -4,7 +4,8 @@ const db=mysql.createConnection({
 	user : "root",
 	password : "",
 	database : 'key_db',
-    port : 3306
+    port : 3306,
+	multipleStatements : true
 });
 
 db.connect();

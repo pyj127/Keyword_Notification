@@ -65,10 +65,3 @@ const Logout = ({navigation}) => {
 };
 
 export default Logout;
-
-/*
-     AsyncStorage.getItem('AuthInfo')
-        .then((value)=>{
-          this.setState({id:value})
-      })
-*/

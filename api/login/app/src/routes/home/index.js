@@ -9,9 +9,13 @@ router.get("/", ctrl.output.hello);
 router.get("/login", ctrl.output.login);
 router.get("/register", ctrl.output.register);
 
-//post 요청시 기능 수행
-router.post("/login", ctrl.process.login);
-router.post("/register", ctrl.process.register);
+//account
+router.post("/login", ctrl.account.login);
+router.post("/register", ctrl.account.register);
+router.get("/logout",ctrl.account.logout);
+router.get("/quit",ctrl.account.quit);
+router.post("/find/id",ctrl.account.findId);
+router.post("/find/pw",ctrl.account.findPw);
 
 //firebase 푸쉬알림
 
@@ -21,14 +25,10 @@ router.get('/keyword/:id', ctrl.fdb.get_data);
 router.put('/keyword/:id', ctrl.fdb.update_data);
 router.delete('/keyword/:id', ctrl.fdb.delete);
 
-//api
-router.post("/logout",ctrl.process.logout);
-router.post("/keyword/add",ctrl.process.addKey);
-router.post("/keyword/delete",ctrl.process.deleteKey);
-<<<<<<< HEAD
+//keyManage
+router.post("/keyword/add",ctrl.keyManage.addKey);
+router.post("/keyword/delete",ctrl.keyManage.deleteKey);
 
-=======
->>>>>>> 79e38063e46889f3ce33f42143fb4e49c3f09ceb
-
+//되나요?
 
 module.exports=router;
