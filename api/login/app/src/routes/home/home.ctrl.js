@@ -9,6 +9,8 @@ const firestore = firebase.firestore();
 const db=require("../../config/db");
 const KeyStorage=require("../../models/KeyStorage");
 const UserStorage = require("../../models/UserStorage");
+const PostStorage=require("../../models/PostStorage");
+
 const output ={
     hello: (req,res)=>{
         res.render("home/index");
@@ -217,11 +219,33 @@ const fdb = {
 
 };
 
+const main={
+    getPortal : async ( req, res) =>{
+        let response;
+        if(req.session.u_id){
+            try{
+                response=await PostStorage.getPortal();
+                console.log(response);
+            }catch(err){
+                response=err;
+                console.log(response);
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+        }
+        return res.json(response);
+    }
+
+};
+
 module.exports={
     output,
     account,
     fdb,
-    keyManage
+    keyManage,
+    main
 };
 
 

@@ -10,6 +10,7 @@ class User{
 
     //console.log(UserStorage.getUserInfo(client.id)) 에서 안에 있는 함수가
     //완료되기 전에 콘솔에 찍혀버림. (다 읽어오기 전에 찍는다.) -> 비동기 필요.
+    //이중로그인 방지 필요.
     async login(){
         const client=this.body;
         try{

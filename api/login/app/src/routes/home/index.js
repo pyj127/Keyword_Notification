@@ -29,6 +29,7 @@ router.delete('/keyword/:id', ctrl.fdb.delete);
 router.post("/keyword/add",ctrl.keyManage.addKey);
 router.post("/keyword/delete",ctrl.keyManage.deleteKey);
 
-//되나요?
+//Main Page (왼쪽 탭)
+router.get("/portal",ctrl.main.getPortal);
 
 module.exports=router;
