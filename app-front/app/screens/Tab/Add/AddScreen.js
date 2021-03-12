@@ -89,7 +89,6 @@ class AddScreen extends Component {
       .then((data) => {
 
         if (data.success === true) {
-
         console.log(data.r_id);
         console.log(keywordIndex);
           Alert.alert("정상적으로 키워드가 추가되었습니다.");
