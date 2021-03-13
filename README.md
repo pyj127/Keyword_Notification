@@ -141,15 +141,14 @@ $ cd app-front
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
 # build for production and launch server
-$ npm run build
-$ npm start
+$ cd android
+$ gradlew build
 
-# generate static project
-$ npm run generate
+# generate and start project
+$ npx react-native start
+$ npx react-native run-android
+
 ```
 ### 4.2. Running back-end
 
