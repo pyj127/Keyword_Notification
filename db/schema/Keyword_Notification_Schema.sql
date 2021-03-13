@@ -32,11 +32,13 @@ CREATE TABLE `crawl_data` (
 	`p_id`	UNSIGNED INT	NULL,
 	`department`	VARCHAR[45]	NULL,
 	`updateDate`	VARCHAR[45]	NULL,
-	`idx`	UNSIGNED INT	NULL
+	`idx`	UNSIGNED INT	NULL,
+	`category`	VARCHAR[45]	NULL
 );
 
 CREATE TABLE `trig` (
 	`trig_id`	UNSIGNED INT	NOT NULL,
+	`u_id`	VARCHAR[50]	NOT NULL,
 	`title`	VARCHAR[100]	NULL,
 	`content`	VARCHAR[500]	NULL,
 	`link`	VARCHAR[200]	NULL,
@@ -45,7 +47,7 @@ CREATE TABLE `trig` (
 	`department`	VARCHAR[45]	NULL,
 	`updateDate`	VARCHAR[45]	NULL,
 	`idx`	VARCHAR[45]	NULL,
-	`u_id2`	VARCHAR[50]	NOT NULL
+	`category`	VARCHAR[45]	NULL
 );
 
 CREATE TABLE `sessions` (
