@@ -49,9 +49,9 @@ const EmailChange = () => {
   useEffect(() => {
     if (didMountRef.current) {
       let _errorMessage = "";
-      if(!email){
+      if (!email) {
         _errorMessage = "이메일을 입력해주세요.";
-      }else if (!validateEmail(email)) {
+      } else if (!validateEmail(email)) {
         _errorMessage = "올바른 이메일 형식이 아닙니다.";
       } else if (!password) {
         _errorMessage = "계정 비밀번호를 입력해주세요.";
@@ -84,7 +84,9 @@ const EmailChange = () => {
         return response.json();
       })
       .then((data) => {
-        Alert.alert("계정 분실, 개인정보 관련 고지 등에 사용되므로, 반드시 본인의 이메일을 입력해주세요. 변경하시겠습니까?");
+        Alert.alert(
+          "계정 분실, 개인정보 관련 고지 등에 사용되므로, 반드시 본인의 이메일을 입력해주세요. 변경하시겠습니까?"
+        );
         if (data.success === true) {
           Alert.alert("정상적으로 이메일이 변경되었습니다.");
         } else {
@@ -123,7 +125,10 @@ const EmailChange = () => {
       />
       <Blank></Blank>
       <Explanation>※반드시 본인의 이메일을 입력해주세요.</Explanation>
-      <Explanation>※계정 분실 시 아이디/비밀번호 찾기, 개인정보 관련 주요 고지사항 안내 등에 사용됩니다.</Explanation>
+      <Explanation>
+        ※계정 분실 시 아이디/비밀번호 찾기, 개인정보 관련 주요 고지사항 안내
+        등에 사용됩니다.
+      </Explanation>
     </Container>
   );
 };

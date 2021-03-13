@@ -1,8 +1,8 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import Keyword from "./Keyword";
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
+import Keyword from './Keyword';
 
-const KeywordList = ({ keywords, deleteKeyword }) => {
+const KeywordList = ({keywords, deleteKeyword}) => {
   keywords = keywords.map((keyword) => {
     return (
       <Keyword
@@ -20,6 +20,6 @@ export default KeywordList;
 const styles = StyleSheet.create({
   keyword: {
     marginTop: 15,
-    //width: 370,
+    width: 370,
   },
 });

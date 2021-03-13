@@ -6,6 +6,7 @@ import {
   ScrollView,
   Alert,
   SafeAreaView,
+  TouchableHighlight,
 } from 'react-native';
 import KeywordInput from './Components/KeywordInput';
 import Button from './Components/Button';
@@ -15,6 +16,13 @@ import SubCategory from './Components/SubCategory';
 import messaging from '@react-native-firebase/messaging';
 
 let keywordIndex = 0;
+
+// url 직접입력할 때 사용
+// const DismissKeyboard = ({ children }) => (
+//   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+//     {children}
+//   </TouchableWithoutFeedback>
+// );
 
 class AddScreen extends Component {
   constructor() {
@@ -89,7 +97,7 @@ class AddScreen extends Component {
 
   deleteKeyword(keywordIndex) {
     let {keywords} = this.state;
-  
+
     messaging().unsubscribeFromTopic(keywords[keywordIndex].title); // 삭제하려는 키워드 값으로 주제구독취소
     keywords = keywords.filter(
       (keyword) => keyword.keywordIndex !== keywordIndex,
@@ -134,7 +142,7 @@ class AddScreen extends Component {
         </View>
 
         <View style={styles.bottom_container}>
-          <KeywordInput 
+          <KeywordInput
             keywordValue={keywordValue}
             keywordChange={(text) => this.keywordChange(text)}
           />
@@ -148,6 +156,17 @@ class AddScreen extends Component {
             sub_cateChange={(value) => this.sub_cateChange(value)}
           />
           <Button submitKeyword={this.submitKeyword} />
+
+          {/* <View style={{marginTop: 10, borderRadius: 8, width: 320}}>
+            <TouchableHighlight
+              onPress={() => this.buttonClick()}
+              underlayColor={'transparent'}>
+              <View style={styles.button}>
+                <Text style={styles.buttonTitle}>키워드 불러오기</Text>
+              </View>
+            </TouchableHighlight>
+          </View> */}
+
           <ScrollView style={styles.scroll}>
             <KeywordList
               deleteKeyword={this.deleteKeyword}
@@ -165,7 +184,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    paddingTop: Platform.OS === 'android' ? 38 : 0,
+    paddingTop: Platform.OS === 'android' ? 15 : 0, //38
   },
   header: {
     flex: 1,
@@ -184,5 +203,16 @@ const styles = StyleSheet.create({
     flex: 18, //이거 더 증가시키면 헤더 부분 작아짐
     alignItems: 'center',
     paddingBottom: 15,
+  },
+  button: {
+    backgroundColor: 'gainsboro',
+    padding: 10,
+    borderRadius: 8,
+  },
+  buttonTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'center',
   },
 });

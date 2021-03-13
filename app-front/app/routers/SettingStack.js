@@ -1,6 +1,6 @@
 import React from 'react';
-import { createStackNavigator } from "@react-navigation/stack";
-import { SafeAreaView } from "react-native";
+import {createStackNavigator} from '@react-navigation/stack';
+import {SafeAreaView} from 'react-native';
 
 import SettingScreen from '../screens/Tab/Set/SettingScreen';
 import Account from '../screens/Tab/Set/SetScreens/Account';
@@ -18,36 +18,34 @@ import Quit from '../screens/Tab/Set/SetScreens/Account/Quit';
 const Stack = createStackNavigator();
 
 const SettingStack = () => {
-
-  return(
-    <SafeAreaView style={{ flex: 1 }}>
+  return (
+    <SafeAreaView style={{flex: 1}}>
       <Stack.Navigator
         screenOptions={{
-          headerTitleAlign: "center",
-          headerTintColor: "dodgerblue",
+          headerTitleAlign: 'center',
+          headerTintColor: 'dodgerblue',
           headerTitleStyle: {
-            fontWeight: "bold",
+            fontWeight: 'bold',
             fontSize: 20,
-            alignSelf: "center",
+            alignSelf: 'center',
           },
-          cardStyle: {backgroundColor: "white"},
+          cardStyle: {backgroundColor: 'white'},
           headerBackTitleVisible: false,
-        }}
-      >
+        }}>
         <Stack.Screen name="설정" component={SettingScreen} />
         <Stack.Screen name="Account" component={Account} />
         <Stack.Screen name="Alarm" component={Alarm} />
-        <Stack.Screen name="AlarmCycle" component={AlarmCycle} />      
+        <Stack.Screen name="AlarmCycle" component={AlarmCycle} />
         <Stack.Screen name="Condition" component={Condition} />
-        <Stack.Screen name="Personal" component={Personal} />      
+        <Stack.Screen name="Personal" component={Personal} />
         <Stack.Screen name="Contact" component={Contact} />
-        <Stack.Screen name="EmailChange" component={EmailChange} />      
+        <Stack.Screen name="EmailChange" component={EmailChange} />
         <Stack.Screen name="PWChange" component={PWChange} />
-        <Stack.Screen name="Logout" component={Logout} />      
+        <Stack.Screen name="Logout" component={Logout} />
         <Stack.Screen name="Quit" component={Quit} />
       </Stack.Navigator>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 export default SettingStack;

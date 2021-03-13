@@ -1,7 +1,7 @@
 import React from 'react';
-import { Alert } from 'react-native';
+import {Alert} from 'react-native';
 import styled from 'styled-components/native';
-import { Button1 } from '../../../../../components';
+import {Button1} from '../../../../../components';
 
 const Container = styled.View`
   flex: 1;
@@ -19,11 +19,10 @@ const Text = styled.Text`
 `;
 
 const Quit = ({navigation}) => {
-
   const _handleLogoutButtonPress = async () => {
     try {
       await quit();
-      navigation.navigate("LoginScreen");
+      navigation.navigate('LoginScreen');
     } catch (e) {
       console.log('[Profile] logout: ', e.message);
     } finally {
@@ -37,7 +36,7 @@ const Quit = ({navigation}) => {
       <Button1
         title="탈퇴하기"
         onPress={_handleLogoutButtonPress}
-        containerStyle={{ marginTop: 30}}
+        containerStyle={{marginTop: 30}}
       />
     </Container>
   );

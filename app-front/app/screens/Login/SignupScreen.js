@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components/native";
 import { Input, Button1, Button2, Button3 } from "../../components";
 import { Alert } from "react-native";
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+//import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { validateEmail, removeWhitespace } from "../../utils/common";
 
 const Container = styled.View`
@@ -45,9 +45,9 @@ const SignupScreen = ({ navigation }) => {
       let _errorMessage = "";
       if (!id) {
         _errorMessage = "아이디를 입력해주세요.";
-      } else if(!email){
+      } else if (!email) {
         _errorMessage = "이메일을 입력해주세요.";
-      }else if (!validateEmail(email)) {
+      } else if (!validateEmail(email)) {
         _errorMessage = "올바른 이메일 형식이 아닙니다.";
       } else if (password.length < 6) {
         _errorMessage = "비밀번호는 6글자 이상이어야 합니다.";
@@ -92,63 +92,63 @@ const SignupScreen = ({ navigation }) => {
   };
 
   return (
-    <KeyboardAwareScrollView extraScrollHeight={10}>
-      <Container>
-        <Blank></Blank>
-        <Input
-          label="아이디"
-          value={id}
-          onChangeText={(text) => setId(text)}
-          onSubmitEditing={() => {
-            setId(id.trim());
-            emailRef.current.focus();
-          }}
-          onBlur={() => setId(id.trim())}
-          placeholder="아이디"
-          returnKeyType="next"
-        />
-        <Input
-          ref={emailRef}
-          label="이메일"
-          value={email}
-          onChangeText={(text) => setEmail(removeWhitespace(text))}
-          onSubmitEditing={() => passwordRef.current.focus()}
-          placeholder="이메일"
-          returnKeyType="next"
-        />
-        <Input
-          ref={passwordRef}
-          label="비밀번호"
-          value={password}
-          onChangeText={(text) => setPassword(removeWhitespace(text))}
-          onSubmitEditing={() => passwordConfirmRef.current.focus()}
-          placeholder="비밀번호"
-          returnKeyType="done"
-          isPassword
-        />
-        <Input
-          ref={passwordConfirmRef}
-          label="비밀번호 확인"
-          value={passwordConfirm}
-          onChangeText={(text) => setPasswordConfirm(removeWhitespace(text))}
-          onSubmitEditing={_handleSignupButtonPress}
-          placeholder="비밀번호 확인"
-          returnKeyType="done"
-          isPassword
-        />
-        <ErrorText>{errorMessage}</ErrorText>
-        <Button3
-          title="회원가입"
-          onPress={_handleSignupButtonPress}
-          disabled={disabled}
-        />
-        <Button2
-          title="로그인 화면으로 돌아가기"
-          onPress={() => navigation.navigate("LoginScreen")}
-          underlayColor={"transparent"}
-        />
-      </Container>
-    </KeyboardAwareScrollView>
+    //<KeyboardAwareScrollView extraScrollHeight={10}>
+    <Container>
+      <Blank></Blank>
+      <Input
+        label="아이디"
+        value={id}
+        onChangeText={(text) => setId(text)}
+        onSubmitEditing={() => {
+          setId(id.trim());
+          emailRef.current.focus();
+        }}
+        onBlur={() => setId(id.trim())}
+        placeholder="아이디"
+        returnKeyType="next"
+      />
+      <Input
+        ref={emailRef}
+        label="이메일"
+        value={email}
+        onChangeText={(text) => setEmail(removeWhitespace(text))}
+        onSubmitEditing={() => passwordRef.current.focus()}
+        placeholder="이메일"
+        returnKeyType="next"
+      />
+      <Input
+        ref={passwordRef}
+        label="비밀번호"
+        value={password}
+        onChangeText={(text) => setPassword(removeWhitespace(text))}
+        onSubmitEditing={() => passwordConfirmRef.current.focus()}
+        placeholder="비밀번호"
+        returnKeyType="done"
+        isPassword
+      />
+      <Input
+        ref={passwordConfirmRef}
+        label="비밀번호 확인"
+        value={passwordConfirm}
+        onChangeText={(text) => setPasswordConfirm(removeWhitespace(text))}
+        onSubmitEditing={_handleSignupButtonPress}
+        placeholder="비밀번호 확인"
+        returnKeyType="done"
+        isPassword
+      />
+      <ErrorText>{errorMessage}</ErrorText>
+      <Button3
+        title="회원가입"
+        onPress={_handleSignupButtonPress}
+        disabled={disabled}
+      />
+      <Button2
+        title="로그인 화면으로 돌아가기"
+        onPress={() => navigation.navigate("LoginScreen")}
+        underlayColor={"transparent"}
+      />
+    </Container>
+    //</KeyboardAwareScrollView>
   );
 };
 

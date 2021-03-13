@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components/native";
-import { Input, Button1, Button2, Button3 } from "../../components";
-import { Alert } from "react-native";
-import { validateEmail, removeWhitespace } from "../../utils/common";
+import React, {useState, useRef, useEffect} from 'react';
+import styled from 'styled-components/native';
+import {Input, Button1, Button2, Button3} from '../../components';
+import {Alert} from 'react-native';
+import {validateEmail, removeWhitespace} from '../../utils/common';
 
 const Container = styled.View`
   flex: 1;
@@ -17,7 +17,7 @@ const Blank = styled.Text`
 `;
 
 const Explanation = styled.Text`
-  flex: 0.1;
+  flex: 0.118;
   align-items: flex-start;
   width: 100%;
   height: 20px;
@@ -35,9 +35,9 @@ const ErrorText = styled.Text`
   color: #ff0000;
 `;
 
-const IDScreen = ({ navigation }) => {
-  const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+const IDScreen = ({navigation}) => {
+  const [email, setEmail] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [disabled, setDisabled] = useState(true);
 
   const emailRef = useRef();
@@ -46,11 +46,11 @@ const IDScreen = ({ navigation }) => {
 
   useEffect(() => {
     if (didMountRef.current) {
-      let _errorMessage = "";
+      let _errorMessage = '';
       if (!validateEmail(email)) {
-        _errorMessage = "올바른 이메일 형식이 아닙니다.";
+        _errorMessage = '올바른 이메일 형식이 아닙니다.';
       } else {
-        _errorMessage = "";
+        _errorMessage = '';
       }
       setErrorMessage(_errorMessage);
     } else {
@@ -62,11 +62,11 @@ const IDScreen = ({ navigation }) => {
     setDisabled(!(email && !errorMessage));
   }, [email, errorMessage]);
 
-  const _handleFindIDButtonPress = ({ navigation }) => {
-    fetch("http://13.125.132.137:3000/register", {
-      method: "POST",
+  const _handleFindIDButtonPress = ({navigation}) => {
+    fetch('http://13.125.132.137:3000/register', {
+      method: 'POST',
       headers: {
-        "CONTENT-TYPE": "application/json",
+        'CONTENT-TYPE': 'application/json',
       },
       body: JSON.stringify({
         id: id,
@@ -80,10 +80,10 @@ const IDScreen = ({ navigation }) => {
       .then((data) => {
         console.log(data);
         if (data.success === true) {
-          Alert.alert("이메일에서 아이디를 확인해주세요.");
-          navigation.navigate("LoginScreen");
+          Alert.alert('이메일에서 아이디를 확인해주세요.');
+          navigation.navigate('LoginScreen');
         } else {
-          Alert.alert("가입된 정보가 없습니다.");
+          Alert.alert('가입된 정보가 없습니다.');
         }
       });
   };
@@ -91,7 +91,7 @@ const IDScreen = ({ navigation }) => {
   return (
     <Container>
       <Input
-        label={""}
+        label={''}
         ref={emailRef}
         value={email}
         onChangeText={(text) => setEmail(removeWhitespace(text))}
@@ -106,13 +106,21 @@ const IDScreen = ({ navigation }) => {
       />
       <Button2
         title="로그인 화면으로 돌아가기"
-        onPress={() => navigation.navigate("LoginScreen")}
-        underlayColor={"transparent"}
+        onPress={() => navigation.navigate('LoginScreen')}
+        underlayColor={'transparent'}
       />
       <Blank></Blank>
-      <Explanation>※가입된 아이디가 있을 경우, 입력하신 이메일로 아이디를 안내해 드립니다.</Explanation>
-      <Explanation>※만약 이메일이 오지 않는다면, 스팸 편지함으로 이동하지 않았는지 확인해주세요.</Explanation>
-      <Explanation>※이메일 서비스 제공자 사정에 의해 즉시 도착하지 않을 수 있으니, 최대 30분 정도 기다리신 후 다시 시도해주세요.</Explanation>
+      <Explanation>
+        ※가입된 아이디가 있을 경우, 입력하신 이메일로 아이디를 안내해 드립니다.
+      </Explanation>
+      <Explanation>
+        ※만약 이메일이 오지 않는다면, 스팸 편지함으로 이동하지 않았는지
+        확인해주세요.
+      </Explanation>
+      <Explanation>
+        ※이메일 서비스 제공자 사정에 의해 즉시 도착하지 않을 수 있으니, 최대
+        30분 정도 기다리신 후 다시 시도해주세요.
+      </Explanation>
     </Container>
   );
 };
@@ -128,7 +136,6 @@ import {
   TouchableHighlight,
   SafeAreaView,
 } from "react-native";
-
 const IDScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
@@ -149,7 +156,6 @@ const IDScreen = ({ navigation }) => {
   );
 };
 export default IDScreen;
-
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "gold",

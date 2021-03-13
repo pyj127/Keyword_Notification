@@ -22,23 +22,19 @@ const Title = styled.Text`
   color: #000000;
 `;
 
-const Button2 = ({ containerStyle, title, onPress, isFilled }) => {
+const Button3 = ({ containerStyle, title, onPress, isFilled }) => {
   return (
-    <Container
-      style={containerStyle}
-      onPress={onPress}
-      isFilled={isFilled}
-    >
-    <Title isFilled={isFilled}>{title}</Title>
+    <Container style={containerStyle} onPress={onPress} isFilled={isFilled}>
+      <Title isFilled={isFilled}>{title}</Title>
     </Container>
   );
 };
 
-Button2.defaultProps = {
+Button3.defaultProps = {
   isFilled: true,
 };
 
-Button2.propTypes = {
+Button3.propTypes = {
   containerStyle: PropTypes.object,
   title: PropTypes.string,
   onPress: PropTypes.func.isRequired,
@@ -46,4 +42,4 @@ Button2.propTypes = {
   disabled: PropTypes.bool, //버튼 동작 여부 시각화
 };
 
-export default Button2;
+export default Button3;
