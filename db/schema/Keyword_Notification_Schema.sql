@@ -1,0 +1,84 @@
+﻿CREATE TABLE `users` (
+	`u_id`	VARCHAR[50]	NOT NULL,
+	`password`	VARCHAR[50]	NULL,
+	`email`	VARCHAR[100]	NULL,
+	`date`	DATETIME	NULL
+);
+
+CREATE TABLE `page` (
+	`p_id`	UNSIGNED INT	NOT NULL,
+	`url`	VARCHAR[1000]	NULL,
+	`p_name`	VARCHAR[100]	NULL
+);
+
+CREATE TABLE `registration` (
+	`up_id`	UNSIGNED INT	NOT NULL,
+	`u_id`	VARCHAR[50]	NOT NULL,
+	`p_id`	UNSIGNED INT	NOT NULL,
+	`k_id`	UNSIGNED INT	NULL
+);
+
+CREATE TABLE `keyword` (
+	`k_id`	UNSIGNED INT	NOT NULL,
+	`keyword`	VARCHAR[100]	NULL,
+	`u_id`	VARCHAR[50]	NOT NULL
+);
+
+CREATE TABLE `crawl_data` (
+	`d_id`	UNSIGNED INT	NOT NULL,
+	`title`	VARCHAR[100]	NULL,
+	`content`	VARCHAR[500]	NULL,
+	`link`	VARCHAR[200]	NULL,
+	`p_id`	UNSIGNED INT	NULL,
+	`department`	VARCHAR[45]	NULL,
+	`updateDate`	VARCHAR[45]	NULL,
+	`idx`	UNSIGNED INT	NULL
+);
+
+CREATE TABLE `trig` (
+	`trig_id`	UNSIGNED INT	NOT NULL,
+	`title`	VARCHAR[100]	NULL,
+	`content`	VARCHAR[500]	NULL,
+	`link`	VARCHAR[200]	NULL,
+	`keyword`	VARCHAR[100]	NULL,
+	`p_id`	UNSIGNED INT	NULL,
+	`department`	VARCHAR[45]	NULL,
+	`updateDate`	VARCHAR[45]	NULL,
+	`idx`	VARCHAR[45]	NULL,
+	`u_id2`	VARCHAR[50]	NOT NULL
+);
+
+CREATE TABLE `sessions` (
+	`session_id`	VARCHAR[128]	NOT NULL,
+	`expires`	UNSIGNED INT	NULL,
+	`data`	MEDIUMTEXT	NULL
+);
+
+ALTER TABLE `users` ADD CONSTRAINT `PK_USERS` PRIMARY KEY (
+	`u_id`
+);
+
+ALTER TABLE `page` ADD CONSTRAINT `PK_PAGE` PRIMARY KEY (
+	`p_id`
+);
+
+ALTER TABLE `registration` ADD CONSTRAINT `PK_REGISTRATION` PRIMARY KEY (
+	`up_id`
+);
+
+ALTER TABLE `keyword` ADD CONSTRAINT `PK_KEYWORD` PRIMARY KEY (
+	`k_id`
+);
+
+ALTER TABLE `crawl_data` ADD CONSTRAINT `PK_CRAWL_DATA` PRIMARY KEY (
+	`d_id`
+);
+
+ALTER TABLE `trig` ADD CONSTRAINT `PK_TRIG` PRIMARY KEY (
+	`trig_id`
+);
+
+ALTER TABLE `sessions` ADD CONSTRAINT `PK_SESSIONS` PRIMARY KEY (
+	`session_id`
+);
+
