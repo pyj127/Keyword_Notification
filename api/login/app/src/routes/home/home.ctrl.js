@@ -134,6 +134,23 @@ const keyManage = {
             console.log(response);
         }
         return res.json(response);
+    },
+    getKey : async(req, res)=>{
+        let response;
+        let data;
+        if(req.session.u_id){
+            try{
+               response=await KeyStorage.getKeyInfo(req.session.u_id);
+            }catch(err){
+                response=err;
+            }
+        }
+        else{
+            response={ success : false, msg : "로그인 되어 있지 않은 사용자입니다."};
+            console.log(response);
+        }
+        return res.json(response);
+
     }
 }
 
@@ -176,23 +193,23 @@ const fdb = {
         res.status(400).send(error.message);
         }
     }, 
-	get_data : async (req, res, next) => {
-        try{
-            const id = req.params.id;
-            const keyword = await firestore.collection('keyword').doc(id);
-            const data = await keyword.get();
-            const keywordArray = [];
-            if(!data.exists){
-                res.status(404).send('Can not find data');
-            }else{
-                res.send(data.data());
-            }
-            res.send('Data save successful');
-        }
-        catch (error){
-        res.status(400).send(error.message);
-        }
-    },
+	// get_data : async (req, res, next) => {
+    //     try{
+    //         const id = req.params.id;
+    //         const keyword = await firestore.collection('keyword').doc(id);
+    //         const data = await keyword.get();
+    //         const keywordArray = [];
+    //         if(!data.exists){
+    //             res.status(404).send('Can not find data');
+    //         }else{
+    //             res.send(data.data());
+    //         }
+    //         res.send('Data save successful');
+    //     }
+    //     catch (error){
+    //     res.status(400).send(error.message);
+    //     }
+    // },
     
     update_data : async (req, res, next) => {
         try{

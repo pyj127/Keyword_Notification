@@ -16,6 +16,7 @@ class User{
         try{
          const { u_id, password } = await UserStorage.getUserInfo(client.id);
             if(u_id){
+                
                 if(u_id=== client.id && password === client.psword){
                     this.session.logined=true;
                     this.session.u_id=u_id;
@@ -27,7 +28,7 @@ class User{
             }
         }catch(e){
 		console.log(e);
-            return { success: false, msg: "존재하지 않는 아이디입니다." };
+            return { success: false, msg: "존재하지 않는 아이디입니다.", err:e};
         }
     }
 

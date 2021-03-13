@@ -21,13 +21,14 @@ router.post("/find/pw",ctrl.account.findPw);
 
 router.post("/send", ctrl.fdb.send);
 router.get("/keyword", ctrl.fdb.get_all);
-router.get('/keyword/:id', ctrl.fdb.get_data);
+//router.get('/keyword/:id', ctrl.fdb.get_data);
 router.put('/keyword/:id', ctrl.fdb.update_data);
 router.delete('/keyword/:id', ctrl.fdb.delete);
 
 //keyManage
 router.post("/keyword/add",ctrl.keyManage.addKey);
 router.post("/keyword/delete",ctrl.keyManage.deleteKey);
+router.get("/keyword/get",ctrl.keyManage.getKey);
 
 //Main Page (왼쪽 탭)
 router.get("/portal",ctrl.main.getPortal);
