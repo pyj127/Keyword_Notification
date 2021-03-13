@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
-import { MaterialIcons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -54,10 +54,7 @@ const Item = React.memo(
         <ItemTextContainer>
           <ItemTitle>{title}</ItemTitle>
         </ItemTextContainer>
-        <MaterialIcons
-          name="keyboard-arrow-right"
-          size={24}
-        />
+        <Icon name="right" size={24} />
       </ItemContainer>
     );
   }
