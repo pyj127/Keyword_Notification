@@ -1,43 +1,39 @@
 # App Front
-ReactNative를 이용해 android, iOS 동시 개발을 진행했습니다. 
+ReactNative로 앱 개발을 진행했습니다.
 
-## 구조 설명
+# 구조 설명
 
-app-front 폴더에서 앱 프론트 전반을 관리했습니다.
+app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 안 폴더 구조는 다음과 같습니다. 
 
-폴더 구조를 간략하게 다음과 같습니다. 
-
-* app-front
-    * android
-        * app
-        * gradle/wrapper
+* android
     * app
-        * components
-        * routers
-        * screens
-            * Login
-            * Tab
-                * Add
-                * List
-                * Set
-        * utils
-    * assets
-    * ios
-    * .node_modules
-    * App.js , app.json, package-lock.json, package.json
+    * gradle/wrapper
+* app
+    * components
+    * routers
+    * screens
+        * Login
+        * Tab
+            * Add
+            * List
+            * Set
+    * utils
+* assets
+* ios
+* .node_modules
+* App.js , app.json, package-lock.json, package.json
 
-폴더의 코드 별로 나누어서 설명드리겠습니다.
 
-### android
+## android
 
 푸시 알림을 구현하기 위해 expo 방식에서 reactnativecli 방식으로 변경했고, 그 과정에서 추가된 코드입니다.
 
-### app
+## app
 
 앱 프론트 소스 전반을 관리했습니다. 크게 **components, routers, scrrens, utils**로 세분화하여 작업했습니다.
 
 
-#### components
+### components
 
 재사용할 수 있는 UI 조립 블록인 컴포넌트를 구현한 코드를 담은 폴더입니다. 
 
@@ -45,7 +41,7 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다.
 * Input.js : 회원가입 스크린에서 input을 입력받는 데 사용한 코드입니다. useState 함수로 상태 변수를 생성하고, 컴포넌트에 값이 변경될 때마다 input이 반영됩니다. 
 * Image.js : 이미지 렌더링을 위한 코드입니다. 
 
-#### routers
+### routers
 
 화면 간의 전환을 하게 해주는 navigation 기능을 구현한 코드를 담은 폴더입니다.
 
@@ -57,7 +53,7 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다.
         * SettingStack.js: 설정 화면 navigation. Stack navigation을 이용해 다른 화면으로 이동합니다.
 
 
-#### screens
+### screens
 
 앱 프론트에서 보여지는 화면들을 구현한 코드를 담은 폴더입니다.
 
@@ -88,25 +84,24 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다.
             * Contact.js: 연락처 화면
             * Personal.js: 개인정보처리방침 화면
         
-#### utils
+## utils
 앱에서 사용되는 기능들을 구현한 코드를 담은 폴더입니다.
 
 * common: 올바른 이메일 형식인지 확인하고, 공백을 제거합니다. 회원가입 화면에서 쓰입니다.
 
-### asssets
+## asssets
 react native를 시작하면 자동생성되는 폴더로, 이미지를 담고 있습니다.
 
 * splash.png: 로딩 화면 png 파일
 
-### ios
+## ios
 fcm key는 ~~입니다.
 
-### .node_modules
+## .node_modules
 
 npm module을 담고 있습니다. private 폴더로, git clone을 해오는 사용자는 직접 npm install로 설치를 해야 폴더가 만들어집니다.
 
-
-### App.js , app.json, package-lock.json, package.json, .gitignore
+## App.js , app.json, package-lock.json, package.json, .gitignore
 
 * App.js: 앱의 시작 코드
 * package.json, package-lock.json: 필요한 패키지 저장
@@ -114,13 +109,13 @@ npm module을 담고 있습니다. private 폴더로, git clone을 해오는 사
 * .gitignore: git에 push하지 않을 코드 정리
 
 
-## 필요한 학습
+# 필요한 학습
 
 ReactNative
 * 스타일링, Hooks, Context API, 내비게이션
 
 
-## 어려웠던 점, TroubleShooting
+# 어려웠던 점, TroubleShooting
 
 * 모듈 설치
 처음 reactnative를 시작할 때 많은 오류, 해결을 위해 필요한 모듈을 모두 설치해야함
