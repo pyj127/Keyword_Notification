@@ -30,12 +30,12 @@ Crontab 주요 issue
 - 주기 설정
 - 로그 파일 생성 -> 오류 체크
 - 주요 함수
-  '''
+```
   crontab -l  //crontab 목록 조회
   crontab -e  //crontab 생성 및 수정
   crontab -r  //crontab 삭제
   tail -f [파일명].log   //로그 파일 조회
-  '''
+```
 
 ## 정리
 대부분의 기능들을 다 처음 접해봐서 공부하고 구현하는 데에 어려운 점이 많았다.
