@@ -9,7 +9,60 @@
 
 ## 2. Crawling
 ### 2-1. Crawling-DB 구조
-crawl.py 파일을 실행한 후 
+* crawl.py
+```
+# 아주대학교 홈페이지 공지사항 사이트 크롤링
+
+conn = pymsql.connect()
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+    
+# 1~2 page 크롤링
+for i in range(2):
+    url = "https://www.ajou.ac.kr/kr/ajou/notice.do?mode=list&&articleLimit=10&article.offset="+str(10*i)
+    res = requests.get(url, verify=False)
+    res.raise_for_status()
+    soup = BeautifulSoup(res.text, "lxml")
+```
+
+```
+# 크롤링한 정보들을 db의 'crawl_data' 테이블로 insert
+curs = conn.cursor()
+
+for j in range(10):
+    sql = "insert into crawl_data (title, content, link, p_id, department, updateDate, idx, category) values(%s, %s, %s, %s, %s, %s, %s, %s)"
+    val = (title[j], content[j], link[j], 1, s[j][2], s[j][3], s[j][0], s[j][1])
+    curs.execute(sql, val)
+    conn.commit()
+    
+conn.close()
+```
+
+* build_db.py
+```
+# 필요한 정보들만 db의 'trig' 테이블로 insert
+
+sql3 = "SELECT c.title, c.content, c.link, c.p_id, c.department, c.updateDate, c.idx, c.category FROM crawl_data c WHERE c.idx NOT IN (SELECT t.idx FROM trig t) AND c.title LIKE '%" + keyword + '%\''
+    curs.execute(sql3)
+    conn.commit()
+    rows3 = curs.fetchall()
+
+    if rows3:
+        for k in rows3:
+        title = k[0]
+        content = k[1]
+        link = k[2]
+        p_id = k[3]
+        department = k[4]
+        updateDate = k[5]
+        idx = k[6]
+        category = k[7]
+
+        sql4 = "insert into trig (u_id, title, content, link, keyword, p_id, department, updateDate, idx, category) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        val = (uid, title, content, link, keyword, p_id, department, updateDate, idx, category)
+        curs.execute(sql4, val)
+        conn.commit()
+        sendMessage("", "")
+```
 
 ---
 # 필요한 학습
@@ -34,8 +87,7 @@ crawl.py 파일을 실행한 후
   crontab -l  //crontab 목록 조회
   crontab -e  //crontab 생성 및 수정
     
-    00, 30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일 내용
-  
+    00, 30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일
   crontab -r  //crontab 삭제
   
   tail -f [파일명].log   //로그 파일 조회
