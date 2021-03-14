@@ -32,7 +32,7 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 폴
 
 ## android
 
-푸시 알림을 구현하기 위해 expo 방식에서 reactnativecli 방식으로 변경했고, 그 과정에서 추가된 코드입니다.
+푸시 알림을 구현하기 위해 expo 방식에서 react-native cli 방식으로 변경했고, 그 과정에서 추가된 코드입니다.   
 파이어베이스에 앱을 등록하기 위해 구성파일을 Android\app안에 넣었고 build.gradle 파일을 수정해 Firebase SDK를 추가하였습니다.
 
 ## app
