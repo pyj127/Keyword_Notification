@@ -26,6 +26,7 @@ for i in range(2):
 
 ```
 # 크롤링한 정보들을 db의 'crawl_data' 테이블로 insert
+
 curs = conn.cursor()
 
 for j in range(10):
@@ -72,7 +73,7 @@ sql3 = "SELECT c.title, c.content, c.link, c.p_id, c.department, c.updateDate, c
 ---
 # 어려웠던 점, TroubleShooting
 ## Crawling
-사이트에서 원하는 부분만 크롤링하는 코드를 구현하기 까다로워서 시간/메모리 측면에서 비효율적인 방식으로 크롤링 데이터를 저장한 것 같다.
+사이트에서 원하는 부분만 크롤링하는 코드를 구현하기 까다로워서 시간/메모리 측면에서 비효율적인 방식으로 크롤링 데이터를 저장한 것 같다.  
 크롤링 문법을 더 익힌 후에 효율적으로 데이터를 저장하는 방식으로 크롤링 코드를 구현하고자 한다.
 
 ## SQL Query문
@@ -88,11 +89,12 @@ sql3 = "SELECT c.title, c.content, c.link, c.p_id, c.department, c.updateDate, c
   crontab -e  //crontab 생성 및 수정
     
     00, 30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일
+    
   crontab -r  //crontab 삭제
   
   tail -f [파일명].log   //로그 파일 조회
 ```
 
 ## 정리
-대부분의 기능들을 다 처음 접해봐서 공부하고 구현하는 데에 어려운 점이 많았다.
+대부분의 기능들을 다 처음 접해봐서 공부하고 구현하는 데에 어려운 점이 많았다.  
 때문에 미숙하게 구현한 부분이 꽤 있지만 이번 기회에 공부한 내용을 바탕으로 다음 프로젝트는 더 완성도 있게 마무리하고자 한다.
