@@ -154,15 +154,21 @@ api를 가져오고(fetch), error 처리하는 부분이 어려웠습니다.
 ### push alarm
 
 푸시 서비스를 이용할 수 있는 3가지 방법으로 Expo Push API, Expo bare fcm, react-native fcm 가 있었습니다.
+
 Expo Push API는 FCM과 직접 통신하는 서버를 구축하는 경우 사용할 수 없었고
+
 Expo bare fcm의 경우는 빌드하는데 시간이 지나치게 오래 소요되었으며 알수없는 오류가 많이 발생하였습니다.
+
 따라서 이러한 과정을 통해 react-native fcm을 이용하기로 결정하게 되었습니다.
+
 백엔드에서는 주제구독방식을 이용할 수 있는 Firebase Admin SDK를 이용함으로써 특정 주제를 구독하는 여러 기기에 메시지를 한번에 보낼 수 있도록 하였습니다
+
 결과적으로 react-native fcm을 사용함으로써 저희가 원하는 키워드 푸시알림서비스에 더욱 가까워지게 되었습니다. 
 
 ### expo cli -> react native cli 변경
 
 react-native의 fcm기능을 사용하기 위해 expo cli에서 react-native cli로 넘어가면서 오류가 나는 부분을 찾아 코드를 수정하는 부분이 어려웠습니다.
+
 기존에 expo방식으로 사용했던 컴포넌트를 react-native 방식으로 수정해야 했습니다.
 
 
