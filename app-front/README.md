@@ -1,10 +1,12 @@
-# App Front - ReactNative
+# App Front
+
+KEY팀은 ReactNative 언어로 앱 프론트엔드를 구현했습니다.
 
 ---
 
 # 구조 설명
 
-app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 안 폴더 구조는 다음과 같습니다. 
+app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 폴더 안 폴더 구조는 다음과 같습니다. 
 
 * android
     * app
@@ -24,6 +26,9 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 안
 * .node_modules
 * App.js , app.json, package-lock.json, package.json
 
+아래는 app-front 하위 폴더와 코드에 대한 설명입니다.
+
+아래의 설명을 모두 읽으면, 키워드 알림 어플의 프론트에서의 동작 방식에 대해 알 수 있습니다.  
 
 ## android
 
