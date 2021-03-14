@@ -9,7 +9,7 @@
 
 ## 2. Crawling
 ### 2-1. Crawling-DB 구조
-* crawl.py
+* **crawl.py**
 ```
 # 아주대학교 홈페이지 공지사항 사이트 크롤링
 
@@ -38,7 +38,7 @@ for j in range(10):
 conn.close()
 ```
 
-* build_db.py
+* **build_db.py**
 ```
 # 필요한 정보들만 db의 'trig' 테이블로 insert
 
