@@ -114,25 +114,17 @@
 
 ## 3. Development result
 
-### 로그인 화면
-![로그인]()
+### 로딩 화면
+![splash (1)](https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png)
 
-#### id 찾기 화면
-![id 찾기]()
-#### 비밀번호 찾기 화면
-![비밀번호 찾기]()
-#### 회원가입 화면
-![회원가임]()
+#### 로그인 화면
+![KakaoTalk_20210214_134259131](https://user-images.githubusercontent.com/77521756/111063849-35892880-84f4-11eb-8005-dd17f497148b.jpg)
 
 ### Main 화면
-![메인]()
+![KakaoTalk_20210314_073131694](https://user-images.githubusercontent.com/77521756/111064916-391fae00-84fa-11eb-9d20-d8a46fba2efb.jpg)
 
-#### list 화면
-![리스트]()
 #### keyword 추가 화면
-![키워드 추가]()
-#### Setting 화면
-![설정]()
+![KakaoTalk_20210310_144648627](https://user-images.githubusercontent.com/77521756/111064920-4177e900-84fa-11eb-929a-c20dcebc1ce2.jpg)
 
 ## 4. How to process
 
