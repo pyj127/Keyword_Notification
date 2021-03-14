@@ -71,7 +71,7 @@ app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 폴
     * SignupScreen.js: 회원가입 화면
 * Tab: 메인 화면 폴더, 탭바
     * Add: 키워드 추가 화면 폴더
-        * Components: 키워드 추가화면에서 쓰이는 각종 
+        * Components: 키워드 추가화면에서 쓰이는 각종 컴포넌트들
         * AddScreen.js: 푸시알림 받고 싶은 키워드를 추가할 수 있는 화면
     * List: 목록 화면 폴더
         * ListScreen: 메인 페이지, 학교 홈페이지의 공지사항 정보 가져옴, flatlist 사용
