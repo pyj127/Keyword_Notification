@@ -127,18 +127,34 @@ ReactNative
 # 어려웠던 점, TroubleShooting
 
 ### 모듈 설치
-처음 reactnative를 시작할 때 많은 오류, 해결을 위해 필요한 모듈을 모두 설치해야함
+
+처음 ReactNative를 시작했을 때 많은 오류가 발생했고 어떻게 해결해야할지 모르겠어서 우왕좌왕했던 경험이 있습니다. 
+
+이러한 문제를 해결하려면, error 메시지에 설치가 필요하다고 뜨는 모듈을 모두 설치해야 합니다. 
 
 ### 헤더 적용 -> stack navigation 
-뒤로가기/이름 변환 등의 기능을 헤더를 사용하려면 stack navigation을 사용해야 함
+
+뒤로가기 기능이 있는 헤더를 적용하기 위해서는 어떻게 해야할까요?
+
+stack navigation을 적용해야 합니다.
+
+스타일링을 해서 헤더를 만들면 단일 화면에서만 헤더를 적용할 수 있고, stack navigation을 이용하면 자동으로 헤더가 적용되고 navigation 구현한 화면에서 헤더 스타일링을 할 수 있습니다. 
 
 ### navigation 상속
- routers 폴더에서, TabStackScreen 아래로 ListTabStack, Setting을 상속시켜 동작시켜야 함. 이 때 각각의 코드는 function 형태가 아니라 const의 구조를 가지고 있어야 동작이 됐음.
+
+한 화면에 두 개의 navigation을 적용하려면, navigation 아래에 navigation을 상속시켜야 합니다.
+
+저는 TabStack의 자식으로 ListTabStack, SettingStack을 상속시켜서 네비게이션을 동작하게 했습니다. 
+
+이 때 네비게이션을 구현한 코드는 function 형태가 아니라 const 구조를 가지고 있어야 동작이 되었습니다.
 
 ### 서버와 연동
-api fetch를 하고, error 처리하는 부분
+
+api를 가져오고(fetch), error 처리하는 부분이 어려웠습니다.
 
 ### push alarm
+
+
 
 ### expo -> react native cli 변경
 
