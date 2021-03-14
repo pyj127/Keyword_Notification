@@ -43,26 +43,26 @@ conn.close()
 # 필요한 정보들만 db의 'trig' 테이블로 insert
 
 sql3 = "SELECT c.title, c.content, c.link, c.p_id, c.department, c.updateDate, c.idx, c.category FROM crawl_data c WHERE c.idx NOT IN (SELECT t.idx FROM trig t) AND c.title LIKE '%" + keyword + '%\''
-    curs.execute(sql3)
+curs.execute(sql3)
+conn.commit()
+rows3 = curs.fetchall()
+
+if rows3:
+    for k in rows3:
+    title = k[0]
+    content = k[1]
+    link = k[2]
+    p_id = k[3]
+    department = k[4]
+    updateDate = k[5]
+    idx = k[6]
+    category = k[7]
+
+    sql4 = "insert into trig (u_id, title, content, link, keyword, p_id, department, updateDate, idx, category) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    val = (uid, title, content, link, keyword, p_id, department, updateDate, idx, category)
+    curs.execute(sql4, val)
     conn.commit()
-    rows3 = curs.fetchall()
-
-    if rows3:
-        for k in rows3:
-        title = k[0]
-        content = k[1]
-        link = k[2]
-        p_id = k[3]
-        department = k[4]
-        updateDate = k[5]
-        idx = k[6]
-        category = k[7]
-
-        sql4 = "insert into trig (u_id, title, content, link, keyword, p_id, department, updateDate, idx, category) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        val = (uid, title, content, link, keyword, p_id, department, updateDate, idx, category)
-        curs.execute(sql4, val)
-        conn.commit()
-        sendMessage("", "")
+    sendMessage("", "")
 ```
 
 ---
