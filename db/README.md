@@ -3,7 +3,9 @@
 
 ---
 # 구조/기능 설명
+##1. Database Management
 
+##2. Crawling
 
 
 ---
