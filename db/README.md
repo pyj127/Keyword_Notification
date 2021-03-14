@@ -87,14 +87,14 @@ if rows3:
 - 로그 파일 생성 -> 오류 체크
 - 주요 함수
 ```
-  crontab -l  //crontab 목록 조회
-  crontab -e  //crontab 생성 및 수정
+crontab -l  //crontab 목록 조회
+crontab -e  //crontab 생성 및 수정
     
     00, 30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일
     
-  crontab -r  //crontab 삭제
+crontab -r  //crontab 삭제
   
-  tail -f [파일명].log   //로그 파일 조회
+tail -f [파일명].log   //로그 파일 조회
 ```
   
   
