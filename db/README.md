@@ -92,7 +92,8 @@ crontab -l  //crontab 목록 조회
 ```
 crontab -e  //crontab 생성 및 수정
 
-00,30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일: 월~금 9:00~18:00 시간대에 매 00분, 30분마다 <crawl.py> 수행
+//cron 파일: 월~금 9:00~18:00 시간대에 매 00분, 30분마다 <crawl.py> 수행
+00,30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1
 ```
 ```
 crontab -r  //crontab 삭제
