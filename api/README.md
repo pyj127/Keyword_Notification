@@ -21,17 +21,21 @@ api 서버 제작
 #### 1. 로그인
 **URL** : /login  
 **METHOD** : /POST  
-**REQUEST BODY** :  
+**REQUEST BODY** :
+```
 {  
   id : (사용자 아이디),
   psword : (사용자 비밀번호)  
-}  
+}
+```
 **RETURN** :  
-성공  
+성공
+```
 {
   success : true,  
-  id : (사용자 아이디)
-}  
+  id : (사용자 아이디)  
+}
+```
 실패  
 
 ---
