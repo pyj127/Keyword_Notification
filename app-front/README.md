@@ -1,7 +1,6 @@
-# App Front
-ReactNative로 앱 개발을 진행했습니다.
+# App Front - ReactNative
 
-# 구조 설명
+## 구조 설명
 
 app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 안 폴더 구조는 다음과 같습니다. 
 
@@ -101,7 +100,7 @@ fcm key는 ~~입니다.
 
 npm module을 담고 있습니다. private 폴더로, git clone을 해오는 사용자는 직접 npm install로 설치를 해야 폴더가 만들어집니다.
 
-## App.js , app.json, package-lock.json, package.json, .gitignore
+## 기타
 
 * App.js: 앱의 시작 코드
 * package.json, package-lock.json: 필요한 패키지 저장
@@ -109,35 +108,32 @@ npm module을 담고 있습니다. private 폴더로, git clone을 해오는 사
 * .gitignore: git에 push하지 않을 코드 정리
 
 
-# 필요한 학습
+## 필요한 학습
 
 ReactNative
 * 스타일링, Hooks, Context API, 내비게이션
 
 
-# 어려웠던 점, TroubleShooting
+## TroubleShooting
 
-* 모듈 설치
+### 모듈 설치
 처음 reactnative를 시작할 때 많은 오류, 해결을 위해 필요한 모듈을 모두 설치해야함
 
-* Hook 사용
-개념과 활용
-
-* 헤더 적용 -> stack navigation
+### 헤더 적용 -> stack navigation 
 뒤로가기/이름 변환 등의 기능을 헤더를 사용하려면 stack navigation을 사용해야 함
 
-* navigation 상속
-routers 폴더에서, TabStackScreen 아래로 ListTabStack, Setting을 상속시켜 동작시켜야 함. 이 때 각각의 코드는 function 형태가 아니라 const의 구조를 가지고 있어야 동작이 됐음.
+### navigation 상속
+ routers 폴더에서, TabStackScreen 아래로 ListTabStack, Setting을 상속시켜 동작시켜야 함. 이 때 각각의 코드는 function 형태가 아니라 const의 구조를 가지고 있어야 동작이 됐음.
 
-* 서버와 연동
+### 서버와 연동
 api fetch를 하고, error 처리하는 부분
 
 
---
+---
 
-* push alarm
+### push alarm
 
-* expo -> react native cli 변경
+### expo -> react native cli 변경
 
 
 
