@@ -24,9 +24,8 @@
 
 <br/>
 
-이제 `아주키워드`에서 원하는 정보 알림을 받아보세요!
+이제 `아주키워드알림`에서 원하는 정보 알림을 받아보세요!
 
-(이미지 넣기)
 
 <br/>
 
@@ -38,6 +37,27 @@
 <br/>
 
 ## 1. Technology used
+
+
+**BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
+
+**Database** `MySQL` `MySQLWorkBench`
+
+**crawling** `Python`
+
+**Server** `AWS EC2` `Firebase`
+
+**FrontEnd** `Javascript` `ReactNative`
+
+**Version Control** `Git`
+
+**Repository** `Github`
+
+**Tools** `Visual Studio Code` `Notion` `Microsoft 365`
+
+
+<br/>
+
 
 ### javascript >
     프로젝트 전반에서 사용하였다. 다른 언어에 비해 배우기 쉽고 개발 시간이 짧고 다양한 프로그래밍 언어 및 여러 데이터베이스와 같은 서버측 프로그램과 긴밀히 통합될 수 있다.
@@ -72,25 +92,9 @@
 ###  Microsoft 365>
     보조 문서 공동 작업 도구. Microsoft PowerPoint로 발표 자료를 만들었다.
  
-<br/>
-
-**BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
-
-**Database** `MySQL` `MySQLWorkBench`
-
-**crawling** `Python`
-
-**Server** `AWS EC2` `Firebase`
-
-**FrontEnd** `Javascript` `ReactNative`
-
-**Version Control** `Git`
-
-**Repository** `Github`
-
-**Tools** `Visual Studio Code` `Notion` `Microsoft 365`
 
 <br/>
+
 
 ## 2. Directory description
 ### 2.1 api
