@@ -68,7 +68,7 @@ if rows3:
 ---
 # 필요한 학습
 * SQL
-
+* BeautifulSoup  
 
 ---
 # 어려웠던 점, TroubleShooting
