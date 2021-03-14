@@ -42,6 +42,7 @@ conn.close()
 ```
 # 필요한 정보들만 db의 'trig' 테이블로 insert
 
+# 'crawl_data' 테이블에서 user가 등록한 keyword가 포함된 title을 가지고, 'trig' 테이블에 존재하지 않는 게시글 정보 가져오기 
 sql3 = "SELECT c.title, c.content, c.link, c.p_id, c.department, c.updateDate, c.idx, c.category FROM crawl_data c WHERE c.idx NOT IN (SELECT t.idx FROM trig t) AND c.title LIKE '%" + keyword + '%\''
 curs.execute(sql3)
 conn.commit()
@@ -57,7 +58,8 @@ if rows3:
     updateDate = k[5]
     idx = k[6]
     category = k[7]
-
+    
+    # 필요 정보들 'trig' 테이블에 insert
     sql4 = "insert into trig (u_id, title, content, link, keyword, p_id, department, updateDate, idx, category) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     val = (uid, title, content, link, keyword, p_id, department, updateDate, idx, category)
     curs.execute(sql4, val)
