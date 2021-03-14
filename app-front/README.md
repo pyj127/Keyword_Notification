@@ -1,5 +1,7 @@
 # App Front - ReactNative
 
+---
+
 ## 구조 설명
 
 app-front 폴더에서 앱 프론트 전반을 관리했습니다. app-front 안 폴더 구조는 다음과 같습니다. 
@@ -107,6 +109,7 @@ npm module을 담고 있습니다. private 폴더로, git clone을 해오는 사
 * app.json
 * .gitignore: git에 push하지 않을 코드 정리
 
+---
 
 ## 필요한 학습
 
@@ -114,7 +117,9 @@ ReactNative
 * 스타일링, Hooks, Context API, 내비게이션
 
 
-## TroubleShooting
+---
+
+## 어려웠던 점, TroubleShooting
 
 ### 모듈 설치
 처음 reactnative를 시작할 때 많은 오류, 해결을 위해 필요한 모듈을 모두 설치해야함
@@ -127,9 +132,6 @@ ReactNative
 
 ### 서버와 연동
 api fetch를 하고, error 처리하는 부분
-
-
----
 
 ### push alarm
 
