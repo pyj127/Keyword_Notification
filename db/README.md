@@ -26,14 +26,18 @@ crawl.py 파일을 실행한 후
 여러 SQL 문법들을 공부하고 사용해보는 데에 시간이 많이 걸렸다.
 
 ## Crontab
-Crontab 주요 issue
+### Crontab 주요 issue
 - 주기 설정
 - 로그 파일 생성 -> 오류 체크
 - 주요 함수
 ```
   crontab -l  //crontab 목록 조회
   crontab -e  //crontab 생성 및 수정
+    
+    00, 30 9-18 * * 1-5 python /home/ubuntu/crawl_py/crawl.py >> /home/ubuntu/crawl_py/ex.log 2>&1    //cron 파일 내용
+  
   crontab -r  //crontab 삭제
+  
   tail -f [파일명].log   //로그 파일 조회
 ```
 
