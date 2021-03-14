@@ -4,6 +4,8 @@
 ---
 # 구조/기능 설명
 ## 1. Database Management
+### 1-1. Schema
+![image](https://user-images.githubusercontent.com/69350945/111055088-b7a62c80-84b5-11eb-8862-3bcdf9299a4c.png)
 
 ## 2. Crawling
 
