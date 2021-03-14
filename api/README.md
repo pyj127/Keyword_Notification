@@ -147,10 +147,12 @@ api 서버 제작
 **URL** : /keyword/add  
 **METHOD** : /POST  
 **REQUEST BODY** :  
+```
 {
     "p_name" : ( 페이지 이름 ),
     "keyword" : ( 키워드 )
 }
+```
 **RETURN** :  
 성공  
 ```
@@ -172,11 +174,13 @@ api 서버 제작
 #### 2. 키워드 삭제  
 **URL** : /keyword/delete  
 **METHOD** : /POST  
-**REQUEST BODY** :
+**REQUEST BODY** :  
+```
 {
     "p_name" : ( 페이지 이름 ),
     "keyword" : ( 키워드 )
 }
+```
 **RETURN** :  
 성공  
 ```
@@ -192,8 +196,8 @@ api 서버 제작
   {success:false, msg : "로그인 되어 있지 않은 사용자입니다."}
 ```
 #### 3. 키워드 가져오기  
-사용자가 입력한 키워드 정보를 반환한다.
-**URL** : /keyword/get
+사용자가 입력한 키워드 정보를 반환한다.  
+**URL** : /keyword/get  
 **METHOD** : /GET  
 **RETURN** :  
 성공  
@@ -236,8 +240,8 @@ api 서버 제작
 
 ### 메인페이지 관리
 #### 1. 포탈 최근 게시물 3개 가져오기
-포탈 공지사항에서 최근 게시물 최대 3개를 가져온다.
-**URL** : /portal
+포탈 공지사항에서 최근 게시물 최대 3개를 가져온다.  
+**URL** : /portal  
 **METHOD** : /GET  
 **RETURN** :  
 성공  
@@ -274,12 +278,9 @@ api 서버 제작
 ```
 {success: false, msg: err}
 ```
-# 필요한 학습
-
-
 
 ---
 # 어려웠던 점, TroubleShooting
-
+쿼리문을 처음 접해서 다루는데 어려웠다. Node Js의 비동기 특징 때문에 간단한 쿼리를 여러번 보내지 않고 다중 쿼리를 활용하였다. 또한, 키워드 가져오기 같은 경우 inner join을 사용하여 데이터베이스 안에 있는 여러 테이블들의 열을 새롭게 조합하여 원하는 정보를 얻어낼 수 있었다.
 
 
