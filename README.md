@@ -120,7 +120,7 @@
 
 ### id 찾기, 비밀번호 찾기, 회원가입 화면
 
-<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="300">  <img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="300">  <img src="https://user-images.githubusercontent.com/60066586/111240247-39c15d00-863e-11eb-9ab1-15e0ce243ce5.jpeg" width="300">
+<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111240247-39c15d00-863e-11eb-9ab1-15e0ce243ce5.jpeg" width="250">
 
 ---
 
