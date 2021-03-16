@@ -115,7 +115,7 @@
 ## 3. Development result
 
 ### 로딩 화면
-![splash (1)](https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png)
+![splash (1)](https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png){: width="50" height="100"}
 
 
 ### 로그인 화면
