@@ -115,22 +115,23 @@
 ## 3. Development result
 
 ### 로딩 화면
-<img src="https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png" width="400">
+<img src="https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png" width="300">
 
 
 ### 로그인 화면
-<img src="https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg" width="300">
 
 #### id 찾기, 비밀번호 찾기, 회원가입 화면
-<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg" width="400>
+<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg" width="300>
 
 ### Main 화면
-<img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="300">
 
 #### 설정 부가 화면
-<img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="300">
 
-<img src="https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg" width="400"><img src="https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg" width="300">
+<img src="https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg" width="300">
 
 ## 4. How to process
 
