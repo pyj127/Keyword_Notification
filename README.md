@@ -117,14 +117,20 @@
 ### 로딩 화면
 ![splash (1)](https://user-images.githubusercontent.com/77521756/111063813-0ecaf200-84f4-11eb-8caa-17ffdda63f2f.png)
 
-#### 로그인 화면
-![KakaoTalk_20210214_134259131](https://user-images.githubusercontent.com/77521756/111063849-35892880-84f4-11eb-8005-dd17f497148b.jpg)
+
+### 로그인 화면
+![login](https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg)
+
+#### id 찾기, 비밀번호 찾기, 회원가입 화면
+![IDFind](https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg)![PWFind](https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg)![Signup](https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg)
 
 ### Main 화면
-![KakaoTalk_20210314_073131694](https://user-images.githubusercontent.com/77521756/111064916-391fae00-84fa-11eb-9d20-d8a46fba2efb.jpg)
+![main1](https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg)![main2](https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg)![main3](https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg)
 
-#### keyword 추가 화면
-![KakaoTalk_20210310_144648627](https://user-images.githubusercontent.com/77521756/111064920-4177e900-84fa-11eb-929a-c20dcebc1ce2.jpg)
+#### 설정 부가 화면
+![main3](https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg)
+
+![EmailChange](https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg)![PWChange](https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg)![Logout](https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg)![Quit](https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg)
 
 ## 4. How to process
 
