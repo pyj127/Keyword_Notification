@@ -122,7 +122,7 @@
 <img src="https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg" width="300">
 
 #### id 찾기, 비밀번호 찾기, 회원가입 화면
-<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg" width="300>
+<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg" width="300">
 
 ### Main 화면
 <img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="300"><img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="300">
