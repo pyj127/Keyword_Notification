@@ -119,7 +119,7 @@
 
 
 ### 로그인 화면
-![login](https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg)
+<img src="https://user-images.githubusercontent.com/60066586/111238406-62dfee80-863a-11eb-82e7-1cb1e9935b6b.jpeg" width="400">
 
 #### id 찾기, 비밀번호 찾기, 회원가입 화면
 ![IDFind](https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg)![PWFind](https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg)![Signup](https://user-images.githubusercontent.com/60066586/111238494-8d31ac00-863a-11eb-89f7-81d726cdefbc.jpeg)
