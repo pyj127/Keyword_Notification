@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import {FlatList} from 'react-native';
 import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
@@ -33,7 +33,7 @@ const Date = styled.Text`
 `;
 const Department = styled.Text`
   font-size: 11px;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 
 const lists = [];
@@ -44,10 +44,12 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-10',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=678&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=678&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=678&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=678&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 lists.push({
   id: 2,
   title: `2021학년도 소프트웨어학과 어학 시험 응시료 지원`,
@@ -55,10 +57,12 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-10',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=677&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=677&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=677&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=677&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 lists.push({
   id: 3,
   title: `[현대엔지비] 소프트웨어 인재육성 및 취업연계 플랫폼(Softeer) 오픈기념 코딩테스트`,
@@ -66,10 +70,12 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-08',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=676&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=676&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=676&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=676&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 lists.push({
   id: 4,
   title: `강의페어링(교양 1학점) 수강신청안내`,
@@ -77,10 +83,12 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-05',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=675&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=675&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=675&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=675&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 lists.push({
   id: 5,
   title: `알고리즘 F045 한국어 강의 변경 안내`,
@@ -88,10 +96,12 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-04',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=674&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=674&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=674&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=674&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 lists.push({
   id: 6,
   title: `[2021년 8월 졸업예정자] 1차졸업사정 결과 안내`,
@@ -99,39 +109,40 @@ lists.push({
   depart: `소프트웨어학과`,
   date: '2021-03-04',
   link: {
-    webURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=673&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
-    mobileWebURL: 'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=673&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    webURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=673&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
+    mobileWebURL:
+      'http://software.ajou.ac.kr/bbs/board.php?tbl=notice&mode=VIEW&num=673&category=&findType=&findWord=&sort1=&sort2=&it_id=&shop_flag=&mobile_flag=&page=1',
   },
-})
+});
 
 const Item = React.memo(
-  ({ item: { id, title, description, depart, date }, onPress }) => {
+  ({item: {id, title, description, depart, date}, onPress}) => {
     return (
-      <ItemContainer onPress={() => onPress({ id, title })}>
+      <ItemContainer onPress={() => onPress({id, title})}>
         <ItemTextContainer>
           <ItemTitle>{title}</ItemTitle>
           <ItemDescription>{description}</ItemDescription>
-          <Department>{depart}   <Date>{date}</Date>   </Department>
+          <Department>
+            {depart} <Date>{date}</Date>{' '}
+          </Department>
         </ItemTextContainer>
       </ItemContainer>
     );
-  }
+  },
 );
 
-const IndividualScreen = ({ navigation }) => {
-
-  const _handleItemPress = item => {
+const IndividualScreen = ({navigation}) => {
+  const _handleItemPress = (item) => {
     navigation.navigate(item.link);
   };
 
   return (
     <Container>
       <FlatList
-        keyExtractor={item => item['id'].toString()}
+        keyExtractor={(item) => item['id'].toString()}
         data={lists}
-        renderItem={({ item }) => (
-          <Item item={item} onPress={_handleItemPress} />
-        )}
+        renderItem={({item}) => <Item item={item} onPress={_handleItemPress} />}
         windowSize={3} //한 화면만 미리 불러오기
       />
     </Container>
@@ -143,7 +154,6 @@ export default IndividualScreen;
 /*
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-
 let message_text1 =
   "2020학년도 2학기 아주대학교 동문장학생 선발\n1. 장학금명 : 아주대학교 동문장학\n2. 장학금액 : 1,000,000원 (인당, 생활비)\n3. 장학대상 : 인천에 연고가 있거나 있었던 자 / 총 5명\n4. 지원자격\n가. 2020학년도 2학기 현재 아주대학교 재학동문 (추후, 학적변동(휴학 또는 제적) 발생시 장학금 환수)\n나. 가계형편이 곤란한 재학동문으로서, 2020학년도 2학기 한국장학재단 소득분위 0~6분위자 우대 ";
 let message_text2 =
@@ -164,7 +174,6 @@ const DetailsScreen = () => {
   );
 };
 export default DetailsScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

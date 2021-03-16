@@ -24,9 +24,8 @@
 
 <br/>
 
-이제 `아주키워드`에서 원하는 정보 알림을 받아보세요!
+이제 `아주키워드알림`에서 원하는 정보 알림을 받아보세요!
 
-(이미지 넣기)
 
 <br/>
 
@@ -38,6 +37,27 @@
 <br/>
 
 ## 1. Technology used
+
+
+**BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
+
+**Database** `MySQL` `MySQLWorkBench`
+
+**crawling** `Python`
+
+**Server** `AWS EC2` `Firebase`
+
+**FrontEnd** `Javascript` `ReactNative`
+
+**Version Control** `Git`
+
+**Repository** `Github`
+
+**Tools** `Visual Studio Code` `Notion` `Microsoft 365`
+
+
+<br/>
+
 
 ### javascript >
     프로젝트 전반에서 사용하였다. 다른 언어에 비해 배우기 쉽고 개발 시간이 짧고 다양한 프로그래밍 언어 및 여러 데이터베이스와 같은 서버측 프로그램과 긴밀히 통합될 수 있다.
@@ -72,37 +92,21 @@
 ###  Microsoft 365>
     보조 문서 공동 작업 도구. Microsoft PowerPoint로 발표 자료를 만들었다.
  
-<br/>
-
-**BackEnd** `Javascript` `Node.js` `Amazon EC2` `ExpressJS`
-
-**Database** `MySQL` `MySQLWorkBench`
-
-**crawling** `Python`
-
-**Server** `AWS EC2` `Firebase`
-
-**FrontEnd** `Javascript` `ReactNative`
-
-**Version Control** `Git`
-
-**Repository** `Github`
-
-**Tools** `Visual Studio Code` `Notion` `Microsoft 365`
 
 <br/>
+
 
 ## 2. Directory description
 ### 2.1 api
-    - ReactNative로 구헌된 front-end 코드
+    - AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
 [README](https://github.com/julie0005/Keyword_Notification/blob/master/api/README.md)
 
 ### 2.2 app-front
-    - AWS EC2 서버에서 데몬 프로세스로 있는 node.js 코드
+    - 앱 컴포넌트 및 UI, 기능 제작
 [README](https://github.com/julie0005/Keyword_Notification/blob/master/app-front/README.md)
 
 ### 2.3 db
-     - 크롤링 및 sql 구현
+     - 웹 크롤링 및 데이터베이스 관리
 [README](https://github.com/julie0005/Keyword_Notification/blob/master/db/README.md)
 
 ### 2.4 meeting_note
@@ -110,25 +114,35 @@
 
 ## 3. Development result
 
-### 로그인 화면
-![로그인]()
+### 로딩 화면, 로그인 화면
 
-#### id 찾기 화면
-![id 찾기]()
-#### 비밀번호 찾기 화면
-![비밀번호 찾기]()
-#### 회원가입 화면
-![회원가임]()
+<img src="https://user-images.githubusercontent.com/60066586/111241334-40e96a80-8640-11eb-8ee3-c556082b24dd.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111241339-421a9780-8640-11eb-85aa-1d9c321050ea.jpeg" width="400">
 
-### Main 화면
-![메인]()
+### id 찾기, 비밀번호 찾기, 회원가입 화면
 
-#### list 화면
-![리스트]()
-#### keyword 추가 화면
-![키워드 추가]()
-#### Setting 화면
-![설정]()
+<img src="https://user-images.githubusercontent.com/60066586/111238467-830fad80-863a-11eb-968e-64eacf145630.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111238486-89058e80-863a-11eb-9b34-1f9418083a80.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111240247-39c15d00-863e-11eb-9ab1-15e0ce243ce5.jpeg" width="250">
+
+---
+
+### 목록 화면
+
+<img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111240279-434ac500-863e-11eb-8bef-423c6870580c.jpeg" width="400">
+
+---
+
+### 키워드 추가 화면
+
+<img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111240273-40e86b00-863e-11eb-9081-8263bf39cee2.jpeg" width="400">
+
+---
+
+### 설정 화면
+
+<img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="400">  
+
+
+<img src="https://user-images.githubusercontent.com/60066586/111240258-3d54e400-863e-11eb-85c2-570285978ccf.jpeg" width="180"><img src="https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg" width="180">  <img src="https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg" width="180">  <img src="https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg" width="180">  <img src="https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg" width="180">
+
 
 ## 4. How to process
 
@@ -141,15 +155,14 @@ $ cd app-front
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
 # build for production and launch server
-$ npm run build
-$ npm start
+$ cd android
+$ gradlew build
 
-# generate static project
-$ npm run generate
+# generate and start project
+$ npx react-native start
+$ npx react-native run-android
+
 ```
 ### 4.2. Running back-end
 

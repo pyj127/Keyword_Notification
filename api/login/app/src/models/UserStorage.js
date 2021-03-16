@@ -10,7 +10,7 @@ class UserStorage{
         return new Promise((resolve, reject)=>{
             db.query("SELECT * FROM user WHERE u_id=?;",[id],(err, data)=>{
                 if(err) reject(`${err}`);
-                if(typeof data[0]=="undefined") reject(false);
+                if(data.length==0) {reject(false);}
                 resolve(data[0]);
             });
         });   
@@ -24,7 +24,6 @@ class UserStorage{
                 for(let i=0; i<data.length; i++){
                     arr[i]=data[i].r_id;
                 }
-                if(data.length==0) reject(false);
                 resolve(arr);
             });
         });
@@ -81,7 +80,6 @@ class UserStorage{
             });
             
         });
-
     }
 
 }

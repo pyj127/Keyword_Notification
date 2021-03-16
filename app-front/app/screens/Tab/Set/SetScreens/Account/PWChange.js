@@ -41,7 +41,7 @@ const SignupScreen = () => {
   useEffect(() => {
     if (didMountRef.current) {
       let _errorMessage = "";
-      
+
       if (!oldpassword) {
         _errorMessage = "현재 비밀번호를 입력해주세요.";
       } else if (newpassword.length < 6) {
@@ -55,10 +55,12 @@ const SignupScreen = () => {
     } else {
       didMountRef.current = true;
     }
-  }, [oldpassword, newpassword ,newpasswordConfirm]);
+  }, [oldpassword, newpassword, newpasswordConfirm]);
 
   useEffect(() => {
-    setDisabled(!( oldpassword && newpassword && newpasswordConfirm && !errorMessage));
+    setDisabled(
+      !(oldpassword && newpassword && newpasswordConfirm && !errorMessage)
+    );
   }, [oldpassword, newpassword, newpasswordConfirm, errorMessage]);
 
   const _handlePWChangeButtonPress = () => {
@@ -77,7 +79,9 @@ const SignupScreen = () => {
         return response.json();
       })
       .then((data) => {
-        Alert.alert("비밀번호를 변경하면 모든 디바이스에서 즉시 로그아웃 처리됩니다. 변경하시겠습니까?");
+        Alert.alert(
+          "비밀번호를 변경하면 모든 디바이스에서 즉시 로그아웃 처리됩니다. 변경하시겠습니까?"
+        );
         if (data.success === true) {
           Alert.alert("비밀번호가 정상적으로 변경되었습니다.");
         } else {
@@ -89,42 +93,42 @@ const SignupScreen = () => {
   return (
     <Container>
       <Blank></Blank>
-        <Input
-          ref={oldpasswordRef}
-          label="현재 비밀번호"
-          value={oldpassword}
-          onChangeText={(text) => setoldPassword(removeWhitespace(text))}
-          onSubmitEditing={() => newpasswordRef.current.focus()}
-          placeholder="현재 비밀번호"
-          returnKeyType="done"
-          isPassword
-        />
-        <Input
-          ref={newpasswordRef}
-          label="새 비밀번호"
-          value={newpassword}
-          onChangeText={(text) => setnewPassword(removeWhitespace(text))}
-          onSubmitEditing={() => newpasswordConfirmRef.current.focus()}
-          placeholder="새 비밀번호"
-          returnKeyType="done"
-          isPassword
-        />
-        <Input
-          ref={newpasswordConfirmRef}
-          label="새 비밀번호 확인"
-          value={newpasswordConfirm}
-          onChangeText={(text) => setnewPasswordConfirm(removeWhitespace(text))}
-          onSubmitEditing={_handlePWChangeButtonPress}
-          placeholder="새 비밀번호 확인"
-          returnKeyType="done"
-          isPassword
-        />
-        <ErrorText>{errorMessage}</ErrorText>
-        <Button1
-          title="비밀번호 변경"
-          onPress={_handlePWChangeButtonPress}
-          disabled={disabled}
-        />
+      <Input
+        ref={oldpasswordRef}
+        label="현재 비밀번호"
+        value={oldpassword}
+        onChangeText={(text) => setoldPassword(removeWhitespace(text))}
+        onSubmitEditing={() => newpasswordRef.current.focus()}
+        placeholder="현재 비밀번호"
+        returnKeyType="done"
+        isPassword
+      />
+      <Input
+        ref={newpasswordRef}
+        label="새 비밀번호"
+        value={newpassword}
+        onChangeText={(text) => setnewPassword(removeWhitespace(text))}
+        onSubmitEditing={() => newpasswordConfirmRef.current.focus()}
+        placeholder="새 비밀번호"
+        returnKeyType="done"
+        isPassword
+      />
+      <Input
+        ref={newpasswordConfirmRef}
+        label="새 비밀번호 확인"
+        value={newpasswordConfirm}
+        onChangeText={(text) => setnewPasswordConfirm(removeWhitespace(text))}
+        onSubmitEditing={_handlePWChangeButtonPress}
+        placeholder="새 비밀번호 확인"
+        returnKeyType="done"
+        isPassword
+      />
+      <ErrorText>{errorMessage}</ErrorText>
+      <Button1
+        title="비밀번호 변경"
+        onPress={_handlePWChangeButtonPress}
+        disabled={disabled}
+      />
     </Container>
   );
 };

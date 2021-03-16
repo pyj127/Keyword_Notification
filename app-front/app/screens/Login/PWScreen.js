@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components/native";
-import { Input, Button1, Button2, Button3 } from "../../components";
-import { Alert } from "react-native";
+import React, {useState} from 'react';
+import styled from 'styled-components/native';
+import {Input, Button1, Button2, Button3} from '../../components';
+import {Alert} from 'react-native';
 
 const Container = styled.View`
   flex: 1;
@@ -15,14 +15,14 @@ const Blank = styled.Text`
   flex: 0.07;
 `;
 
-const PWScreen = ({ navigation }) => {
-  const [id, setId] = useState("");
+const PWScreen = ({navigation}) => {
+  const [id, setId] = useState('');
 
-  const _handleFindPWButtonPress = ({ navigation }) => {
-    fetch("http://13.125.132.137:3000/register", {
-      method: "POST",
+  const _handleFindPWButtonPress = ({navigation}) => {
+    fetch('http://13.125.132.137:3000/register', {
+      method: 'POST',
       headers: {
-        "CONTENT-TYPE": "application/json",
+        'CONTENT-TYPE': 'application/json',
       },
       body: JSON.stringify({
         id: id,
@@ -35,37 +35,34 @@ const PWScreen = ({ navigation }) => {
       })
       .then((data) => {
         if (data.success === true) {
-          Alert.alert("휴대폰 인증을 진행합니다."); //PASS 앱
+          Alert.alert('휴대폰 인증을 진행합니다.'); //PASS 앱
         } else {
-          Alert.alert("가입된 정보가 없습니다. 아이디 찾기로 이동합니다.");
-          navigation.navigate("IDScreen");
+          Alert.alert('가입된 정보가 없습니다. 아이디 찾기로 이동합니다.');
+          navigation.navigate('IDScreen');
         }
       });
   };
 
   return (
-      <Container>
-        <Input
-          label={""}
-          value={id}
-          onChangeText={(text) => setId(text)}
-          onSubmitEditing={() => {
-            setId(id.trim());
-          }}
-          onBlur={() => setId(id.trim())}
-          placeholder="가입된 아이디"
-        />
-        <Blank></Blank>
-        <Button3
-          title="비밀번호 찾기"
-          onPress={_handleFindPWButtonPress}
-        />
-        <Button2
-          title="로그인 화면으로 돌아가기"
-          onPress={() => navigation.navigate("LoginScreen")}
-          underlayColor={"transparent"}
-        />
-      </Container>
+    <Container>
+      <Input
+        label={''}
+        value={id}
+        onChangeText={(text) => setId(text)}
+        onSubmitEditing={() => {
+          setId(id.trim());
+        }}
+        onBlur={() => setId(id.trim())}
+        placeholder="가입된 아이디"
+      />
+      <Blank></Blank>
+      <Button3 title="비밀번호 찾기" onPress={_handleFindPWButtonPress} />
+      <Button2
+        title="로그인 화면으로 돌아가기"
+        onPress={() => navigation.navigate('LoginScreen')}
+        underlayColor={'transparent'}
+      />
+    </Container>
   );
 };
 
@@ -80,7 +77,6 @@ import {
   TouchableHighlight,
   SafeAreaView,
 } from "react-native";
-
 const PWScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
@@ -101,7 +97,6 @@ const PWScreen = ({ navigation }) => {
   );
 };
 export default PWScreen;
-
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "gold",

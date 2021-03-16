@@ -1,6 +1,6 @@
-import React from "react";
-import { View, StyleSheet, TextInput } from "react-native";
-const KeywordInput = ({ keywordValue, keywordChange }) => (
+import React from 'react';
+import {View, StyleSheet, TextInput} from 'react-native';
+const KeywordInput = ({keywordValue, keywordChange}) => (
   <View style={styles.keword_in}>
     <TextInput
       value={keywordValue}
@@ -14,12 +14,11 @@ const KeywordInput = ({ keywordValue, keywordChange }) => (
 );
 const styles = StyleSheet.create({
   keword_in: {
-    height: Platform.OS === "android" ? 45 : 50,
-    width: Platform.OS === "android" ? 320 : 330,
-    backgroundColor: "whitesmoke",
-    marginTop: Platform.OS === "android" ? 15 : 20,
-    paddingTop: Platform.OS === "android" ? 10 : 13,
-    borderRadius: Platform.OS === "android" ? 0 : 6,
+    height: Platform.OS === 'android' ? 45 : 50,
+    width: Platform.OS === 'android' ? 320 : 330,
+    backgroundColor: 'whitesmoke',
+    marginTop: Platform.OS === 'android' ? 15 : 20,
+    borderRadius: Platform.OS === 'android' ? 0 : 6,
   },
 });
 export default KeywordInput;

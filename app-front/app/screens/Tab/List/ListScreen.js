@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import {FlatList} from 'react-native';
 import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
@@ -33,9 +33,24 @@ const Date = styled.Text`
 `;
 const Department = styled.Text`
   font-size: 11px;
-  color: #1E90FF;
+  color: #1e90ff;
 `;
 // dedgerblue: #1E90FF
+const Header = styled.View`
+  height: 30px;
+  color: #1e90ff;
+  margin-bottom: 26px;
+  padding-top: 13px;
+`;
+const HeaderText = styled.Text`
+  font-size: 20px;
+  font-weight:bold;
+  color: #1e90ff;
+  text-align: center;
+  border-bottom-width: 1.5px;
+  border-bottom-color: rgba(0,0,0,0.18)
+  padding-bottom: 10px;
+`;
 
 const lists = [];
 lists.push({
@@ -45,10 +60,12 @@ lists.push({
   depart: `대학일자리센터 운영팀`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107720&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107720&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107720&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107720&article.offset=0&articleLimit=10',
   },
-})
+});
 lists.push({
   id: 2,
   title: `[생활관] 2021년 1학기 생활관 입사 추가 신청 안내`,
@@ -56,10 +73,12 @@ lists.push({
   depart: `생활관`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107719&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107719&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107719&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107719&article.offset=0&articleLimit=10',
   },
-})
+});
 lists.push({
   id: 3,
   title: `학생식당 푸드코트 오픈 안내`,
@@ -67,10 +86,12 @@ lists.push({
   depart: `총무팀`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107718&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107718&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107718&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107718&article.offset=0&articleLimit=10',
   },
-})
+});
 lists.push({
   id: 4,
   title: `연암관 코로나19 확진 사실 알림`,
@@ -78,10 +99,12 @@ lists.push({
   depart: `대학일자리센터`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107714&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107714&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107714&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107714&article.offset=0&articleLimit=10',
   },
-})
+});
 lists.push({
   id: 5,
   title: `[봉사활동] (영통구청) 지성·감성 쑥쑥! 언택트 학습·정서 멘토링 멘토 모집(재공지)`,
@@ -89,10 +112,12 @@ lists.push({
   depart: `사회봉사센터`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107706&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107706&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107706&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107706&article.offset=0&articleLimit=10',
   },
-})
+});
 lists.push({
   id: 6,
   title: `[대학일자리센터] AI 모바일 앱 서비스 이용 안내`,
@@ -100,40 +125,43 @@ lists.push({
   depart: `대학일자리센터`,
   date: '2021-03-10',
   link: {
-    webURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107699&article.offset=0&articleLimit=10',
-    mobileWebURL: 'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107699&article.offset=0&articleLimit=10',
+    webURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107699&article.offset=0&articleLimit=10',
+    mobileWebURL:
+      'https://www.ajou.ac.kr/kr/ajou/notice.do?mode=view&articleNo=107699&article.offset=0&articleLimit=10',
   },
-})
+});
 
 const Item = React.memo(
-  ({ item: { id, title, description, depart, date }, onPress }) => {
+  ({item: {id, title, description, depart, date}, onPress}) => {
     return (
-      <ItemContainer onPress={() => onPress({ id, title })}>
+      <ItemContainer onPress={() => onPress({id, title})}>
         <ItemTextContainer>
           <ItemTitle>{title}</ItemTitle>
           <ItemDescription>{description}</ItemDescription>
-          <Department>{depart}   <Date>{date}</Date>   </Department>
+          <Department>
+            {depart} <Date>{date}</Date>{' '}
+          </Department>
         </ItemTextContainer>
       </ItemContainer>
     );
-  }
+  },
 );
 
-const ListScreen = ({ navigation }) => {
-
-  const _handleItemPress = item => {
+const ListScreen = ({navigation}) => {
+  const _handleItemPress = (item) => {
     navigation.navigate(item.link);
   };
 
   return (
     <Container>
+      <Header>
+        <HeaderText>{'포탈 공지사항'}</HeaderText>
+      </Header>
       <FlatList
-        keyExtractor={item => item['id'].toString()}
+        keyExtractor={(item) => item['id'].toString()}
         data={lists}
-        renderItem={({ item }) => (
-          <Item item={item} onPress={_handleItemPress} 
-        />
-        )}
+        renderItem={({item}) => <Item item={item} onPress={_handleItemPress} />}
         windowSize={3} //한 화면만 미리 불러오기
       />
     </Container>
@@ -144,11 +172,9 @@ export default ListScreen;
 /*
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-
 let message_title = "참가";
 let message_detail = "2020-2 아주대학교 동문장학생\n선발안내 ~(12/3, 17:00)";
 let navigate = "장학생,등록금";
-
 //웬만하면 message를 함수로 만들어서 추가될때마다 재사용하게끔 하기
 // const Message = ({ navigation }) => {
 //   return (
@@ -175,7 +201,6 @@ let navigate = "장학생,등록금";
 //     </View>
 //   );
 // };
-
 const ListScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -231,7 +256,6 @@ const ListScreen = ({ navigation }) => {
   );
 };
 export default ListScreen;
-
 const styles = StyleSheet.create({
   container: {
     //flex: 1,

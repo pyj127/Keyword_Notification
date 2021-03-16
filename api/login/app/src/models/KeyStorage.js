@@ -4,7 +4,47 @@ const { resolveCname } = require("dns");
 const db=require("../config/db");
 
 class KeyStorage{
+
+    static getPageName(p_id){
+        return new Promise((resolve, reject)=>{
+            db.query("SELECT * FROM page WHERE p_id=?;",[p_id],(err, data)=>{
+                if(data.length==0) {reject({success: false, msg: "해당 페이지는 제공하고 있지 않습니다."});}
+                else{
+                    resolve(data[0].p_name);
+                }
+               if(err){
+                reject({success: false, msg: err});
+               }
+            });
+        });   
+    }
+    static getKeyName(k_id){
+        return new Promise((resolve, reject)=>{
+            db.query("SELECT * FROM keyword WHERE k_id=?;",[k_id],(err, data)=>{
+                if(data.length==0) {reject({success: false, msg: "해당 페이지는 제공하고 있지 않습니다."});}
+                else{
+                    resolve(data[0].keyword);
+                }
+               if(err){
+                reject({success: false, msg: err});
+               }
+            });
+        }); 
+    }
     
+    static async getKeyInfo(u_id){
+        return new Promise((resolve, reject)=>{
+            db.query("select registration.r_id, page.p_name, keyword.keyword from registration inner join page on registration.p_id=page.p_id inner join keyword on registration.k_id=keyword.k_id where registration.u_id=?",[u_id],(err,data)=>{
+                if(data.length==0) {resolve({success: true, msg: "아직 등록한 키워드가 존재하지 않습니다."});}
+                else{
+                    resolve({success : true, data : data});
+                }
+                if(err){
+                    reject({success:false,msg:err});
+                }
+            });
+        });
+    }
 
     static async getPageInfo(p_name){
         return new Promise((resolve, reject)=>{
