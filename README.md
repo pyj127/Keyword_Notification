@@ -126,13 +126,13 @@
 
 ### 목록 화면
 
-<img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="390">  <img src="https://user-images.githubusercontent.com/60066586/111240279-434ac500-863e-11eb-8bef-423c6870580c.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238523-9cb0f500-863a-11eb-8b89-31c6c9629e0f.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111240279-434ac500-863e-11eb-8bef-423c6870580c.jpeg" width="400">
 
 ---
 
 ### 키워드 추가 화면
 
-<img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="380">  <img src="https://user-images.githubusercontent.com/60066586/111240273-40e86b00-863e-11eb-9081-8263bf39cee2.jpeg" width="400">
+<img src="https://user-images.githubusercontent.com/60066586/111238525-9d498b80-863a-11eb-84e5-9c945aff8162.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111240273-40e86b00-863e-11eb-9081-8263bf39cee2.jpeg" width="400">
 
 ---
 
