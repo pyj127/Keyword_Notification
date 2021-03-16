@@ -129,7 +129,7 @@
 ### 설정 화면
 <img src="https://user-images.githubusercontent.com/60066586/111238572-aaff1100-863a-11eb-9c79-7c4124ccf16b.jpeg" width="400">  <img src="https://user-images.githubusercontent.com/60066586/111240258-3d54e400-863e-11eb-85c2-570285978ccf.jpeg" width="400">
 
-<img src="https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg" width="250">  <img src="https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg" width="250">
+<img src="https://user-images.githubusercontent.com/60066586/111238636-c9fda300-863a-11eb-9864-9e0d5d9df96f.jpeg" width="200">  <img src="https://user-images.githubusercontent.com/60066586/111238640-cb2ed000-863a-11eb-86ff-fbba86c1d393.jpeg" width="200">  <img src="https://user-images.githubusercontent.com/60066586/111238649-cf5aed80-863a-11eb-832d-46ca94e76309.jpeg" width="200">  <img src="https://user-images.githubusercontent.com/60066586/111238643-ce29c080-863a-11eb-894e-579439af002b.jpeg" width="200">
 
 
 ## 4. How to process
