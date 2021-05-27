@@ -103,7 +103,7 @@ crontab -r  //crontab 삭제
 ```
 tail -f [파일명].log   //로그 파일 조회
 ```
-https://www.notion.so/Crontab-483df73a0b844072941fb9ede05a7a65
+https://www.notion.so/Crontab-483df73a0b844072941fb9ede05a7a65  
 ▲ Crontab Notion 정리
 
 ## 정리
